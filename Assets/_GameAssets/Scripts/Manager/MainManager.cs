@@ -46,6 +46,7 @@ public class MainManager : MonoBehaviour
         {
             slider = GameObject.Find("SliderVolumen").GetComponent<Slider>();
             slider.onValueChanged.AddListener(delegate { ModificarVolumen(); });
+            slider.maxValue = 1;
 
             RestoreVolume();
 
@@ -69,12 +70,13 @@ public class MainManager : MonoBehaviour
         if (PlayerPrefs.HasKey(KEY_VOLUME))
         {
 
+
             slider.value = PlayerPrefs.GetFloat("Volumen");
 
         }
         else
         {
-            slider.maxValue = audiosourceBSO.volume;
+            slider.maxValue = 1;
             slider.value = slider.maxValue;
         }
     }
@@ -95,17 +97,17 @@ public class MainManager : MonoBehaviour
     }
     public void SaveName()
     {
-        inputName=GameObject.Find("Nombre").GetComponent<TextMeshProUGUI>();
+        inputName = GameObject.Find("Nombre").GetComponent<TextMeshProUGUI>();
         print(inputName.text);
         PlayerPrefs.SetString(KEY_NAME, inputName.text);
         PlayerPrefs.Save();
-        
+
     }
     public void RestoreName()
     {
         if (PlayerPrefs.HasKey(KEY_NAME))
         {
-            textNombre=GameObject.Find("TextoNombre").GetComponent<TextMeshProUGUI>();
+            textNombre = GameObject.Find("TextoNombre").GetComponent<TextMeshProUGUI>();
 
             textNombre.text = PlayerPrefs.GetString("Nombre");
 

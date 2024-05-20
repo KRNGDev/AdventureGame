@@ -9,8 +9,8 @@ using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
-    
-    public  string nombreUbicacion;
+    public GameObject playerPrefab;
+    public string nombreUbicacion;
     public List<Item> inventarioItem = new List<Item>();
 
     public List<Item> inventarioEquipacion = new List<Item>();
@@ -20,9 +20,10 @@ public class GameManager : MonoBehaviour
     public GameObject prefabItemPanel;
     public TextMeshProUGUI nombre;
     public bool condicion = false;
-    
-    
-    
+    private GameObject player;
+
+
+
     [Header("Recuento de puntos")]
     public int puntosActuales = 0;
     public int puntosMax;
@@ -32,8 +33,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.Find("Player");
         nombre = GameObject.Find("NombreTexto").GetComponent<TextMeshProUGUI>();
         nombre.text = PlayerPrefs.GetString("Nombre");
+
+    }
+    void Update()
+    {
+
 
     }
 

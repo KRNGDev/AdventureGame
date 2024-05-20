@@ -15,12 +15,15 @@ public class VidaPlayer : MonoBehaviour
 
     public GameObject panelGameOver;
     private bool dado = false;
+    [Header("Fx Personaje")]
+    public GameObject humo;
 
-private void Start() {
-    panelGameOver=GameObject.Find("PanelGameOver");
-    panelGameOver.SetActive(false);
-    
-}
+    private void Start()
+    {
+        panelGameOver = GameObject.Find("PanelGameOver");
+        panelGameOver.SetActive(false);
+
+    }
 
     void Update()
     {
@@ -28,7 +31,7 @@ private void Start() {
 
         if (GetComponent<Stats>().vidaActual <= 0)
         {
-            GameObject gm=GameObject.Find("GameManager");
+            GameObject gm = GameObject.Find("GameManager");
             gm.GetComponent<UiManager>().controller.SetActive(false);
 
             GetComponent<Animator>().SetBool("muerto", true);
@@ -84,7 +87,12 @@ private void Start() {
     }
     public void GameOver()
     {
-        Time.timeScale = 0;
+
+
+        Instantiate(humo, transform.position, transform.rotation);
+        Destroy(transform.gameObject);
+
+        //Time.timeScale = 0;
     }
 
 }

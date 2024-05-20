@@ -8,7 +8,7 @@ namespace enemigo
     public class Enemigo : MonoBehaviour
     {
 
-
+        public float distanciaAtaque = 1.5f;
         [Header("Estados Enemigo")]
         public bool atacando = false;
         [Header("GameObject Player")]
@@ -26,31 +26,43 @@ namespace enemigo
             cs.sourceTransform = Camera.main.transform;
             GetComponentInChildren<LookAtConstraint>().AddSource(cs);
             animator = GetComponent<Animator>();
-            target = GameObject.FindGameObjectWithTag("Player");
+            target = GameObject.Find("Player");
 
         }
 
         // Update is called once per frame
         void Update()
         {
-
-            if (Vector3.Distance(transform.position, target.transform.position) < 8)
+            if (!atacando)
             {
 
+                if (Vector3.Distance(transform.position, target.transform.position) < 8)
+                {
 
-                GetComponent<NavMeshAgent>().destination = target.transform.position;
-                if (Vector3.Distance(transform.position, target.transform.position) < 2)
-                {
-                    transform.LookAt(target.transform);
-                    animator.SetBool("ataca", true);
-                }
-                else
-                {
-                    animator.SetBool("ataca", false);
+
+                    GetComponent<NavMeshAgent>().destination = target.transform.position;
+                    if (Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
+                    {
+                        transform.LookAt(target.transform);
+                        animator.SetBool("ataca", true);
+                    }
+                    else
+                    {
+                        animator.SetBool("ataca", false);
+                    }
                 }
             }
 
 
+        }
+        public void Detenerse()
+        {
+            atacando = true;
+        }
+
+        public void Moverse()
+        {
+            atacando = false;
         }
 
 

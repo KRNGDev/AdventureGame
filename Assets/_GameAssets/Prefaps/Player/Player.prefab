@@ -2430,6 +2430,7 @@ GameObject:
   - component: {fileID: 2172263587705466788}
   - component: {fileID: 634879413890033450}
   - component: {fileID: 7708631610205069516}
+  - component: {fileID: 7484591190076012201}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -2641,6 +2642,7 @@ MonoBehaviour:
   inmortal: 0
   tagEnemigo: EspadaEnemiga
   panelGameOver: {fileID: 0}
+  humo: {fileID: 104829970813648393, guid: d3015b7eea383f64d8b81f965cc466e7, type: 3}
 --- !u!82 &2172263587705466788
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2653,7 +2655,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.516
+  m_Volume: 0.532
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2662,7 +2664,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2697,7 +2699,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.535
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2776,6 +2778,14 @@ MonoBehaviour:
   hablado: 0
   dialogo2: 
   panelDialogos: {fileID: 1332383534826950567, guid: c05c87f9ff85d684e823769d13df6718, type: 3}
+--- !u!81 &7484591190076012201
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8746291233703546103}
+  m_Enabled: 1
 --- !u!1 &8823086953963519560
 GameObject:
   m_ObjectHideFlags: 0

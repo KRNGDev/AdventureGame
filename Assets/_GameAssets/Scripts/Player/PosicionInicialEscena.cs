@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PosicionInicialEscena : MonoBehaviour
@@ -17,17 +18,16 @@ public class PosicionInicialEscena : MonoBehaviour
     {
         GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         posicion = gm.nombreUbicacion;
-        print(posicion);
 
-        
-                player.transform.position = GameObject.Find(posicion).transform.position;
-        
-        
-    }
+        if (posicion != null)
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
+            player.transform.position = GameObject.Find(posicion).transform.position;
+
+        }
+
+
 
     }
+
 }
