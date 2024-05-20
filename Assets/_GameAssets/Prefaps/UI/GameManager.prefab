@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6908254658967300327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8653489456697083735}
+  - component: {fileID: 2960039818174595229}
+  - component: {fileID: 6479621010264438447}
+  - component: {fileID: 1376183094954100273}
+  - component: {fileID: 271360946410501306}
+  - component: {fileID: 6258513705749195996}
+  - component: {fileID: 9188266881429896270}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8653489456697083735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908254658967300327}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1893.571, y: 361.13235, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2960039818174595229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908254658967300327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e8491690c14904c8af82dc849bb2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelMenu: {fileID: 0}
+  controller: {fileID: 0}
+  panelPersonaje: {fileID: 0}
+  btnMenu: {fileID: 0}
+  panelItems: {fileID: 0}
+  panelDescripcion: {fileID: 0}
+  panelEquipo: {fileID: 0}
+  panelOpciones: {fileID: 0}
+  panelBtnOpciones: {fileID: 0}
+  panelNoUsarMas: {fileID: 0}
+  panelYaEstaEquipado: {fileID: 0}
+  prefabSonido: {fileID: 5236518395206502799, guid: 557bca93d4d1a034b9690da7eb1d204a,
+    type: 3}
+  sonidoAtras: {fileID: 8300000, guid: bbae85860e1880b4c8b056d33a4716eb, type: 3}
+  sonidoSelect: {fileID: 8300000, guid: 795c4ea2ea1ffc54982c652644a64520, type: 3}
+  sonidoconfrmar: {fileID: 8300000, guid: 311ed1f1bf2aa1847b8f10462f75982f, type: 3}
+  sonidoMenu: {fileID: 8300000, guid: 76900dfe0d15dc34fb621e6ab0cf8466, type: 3}
+  sonidoEquipar: {fileID: 8300000, guid: b190a8a5f59499f4f9204e64b9a04da9, type: 3}
+  sonidoQuitar: {fileID: 8300000, guid: 7e58c1718e011c847949792efd486a17, type: 3}
+  sonidoUsar: {fileID: 8300000, guid: 3188ef79fb399f048b4f07404694ef68, type: 3}
+  sonidoMensaje: {fileID: 8300000, guid: 563884892133af446bdb373e00a7a764, type: 3}
+  sonidoBack: {fileID: 8300000, guid: 590e6507aa597d542802168990714227, type: 3}
+--- !u!114 &6479621010264438447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908254658967300327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d1aaf393cf69e4e9a7bd844f0ad234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventarioItem: []
+  inventarioEquipacion: []
+  panelContenItem: {fileID: 0}
+  panelContenEquipo: {fileID: 0}
+  prefabItemPanel: {fileID: 4229104331670055269, guid: d0721724b8b0896479a6d32b76f476c6,
+    type: 3}
+  nombre: {fileID: 0}
+  condicion: 0
+  puntosActuales: 0
+  puntosMax: 0
+  puntos: 0
+--- !u!114 &1376183094954100273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908254658967300327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef85b9818385a2a4c80d9e801a1c7cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espada: 0
+  escudo: 0
+--- !u!114 &271360946410501306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908254658967300327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a705d92b3ccbeda4bbcf72d36d1c01d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espadaCorta: {fileID: 0}
+  espadaMaestra: {fileID: 0}
+  escudoBasico: {fileID: 0}
+--- !u!114 &6258513705749195996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908254658967300327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b6d569d57f4fb4fbbca6d6463a56d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnJugar: {fileID: 0}
+  btnSalir: {fileID: 0}
+  btnVolverNombre: {fileID: 0}
+--- !u!114 &9188266881429896270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908254658967300327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b76fa61ecb7b744a8f3e98bdc7d266e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porton: {fileID: 0}
