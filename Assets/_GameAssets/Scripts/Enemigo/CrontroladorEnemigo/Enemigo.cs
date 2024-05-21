@@ -1,5 +1,254 @@
+
+
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Animations;
+
+namespace enemigo
+{
+    public class Enemigo : MonoBehaviour
+    {
+        [Header("Objetivo a seguir")]
+        public float rangoDeteccion = 10.0f;
+        public string nombreTagAtacar = "Player";
+        [Header("Objetivo a seguir")]
+        public bool seguir;
+        public string nombreTagObjetivo;
+        public float distanciaAtaque = 1.5f;
+        public float velDisparo = 10;
+        public float tiempoMagia = 2;
+        public GameObject bolaFuegoPrefab;
+        public Transform spawnSlash;
+        [Header("Estados Enemigo")]
+        public bool atacando = false;
+
+        private Animator animator;
+        private GameObject target;
+        private GameObject targetSeguir;
+
+        private bool muerto;
+        public bool congelado = false;
+        private NavMeshAgent navMeshAgent;
+        private bool esperandoEnemigo = false;
+        private float x, y;
+        public float tiempoEspera = 0.5f;
+        public List<Transform> targets;
+        private int nextTarget = 0;
+
+        void Start()
+        {
+            ConstraintSource cs = new ConstraintSource();
+            cs.weight = 1;
+            cs.sourceTransform = Camera.main.transform;
+            GetComponentInChildren<LookAtConstraint>().AddSource(cs);
+            animator = GetComponent<Animator>();
+            target = GameObject.FindWithTag(nombreTagAtacar);
+
+            if (nombreTagObjetivo != "")
+            {
+                targetSeguir = GameObject.FindWithTag(nombreTagObjetivo);
+            }
+
+            // Inicializar NavMeshAgent
+            navMeshAgent = GetComponent<NavMeshAgent>();
+        }
+
+        void Update()
+        {
+            if (!atacando)
+            {
+
+                if (seguir)
+                {
+                    if (targetSeguir != null && Vector3.Distance(transform.position, targetSeguir.transform.position) > 3.5f)
+                    {
+                        navMeshAgent.destination = targetSeguir.transform.position;
+                        navMeshAgent.isStopped = false; // Asegura que el agente no esté detenido
+                    }
+                    else if (targetSeguir != null)
+                    {
+                        navMeshAgent.isStopped = true; // Detiene el agente
+                        transform.LookAt(targetSeguir.transform);
+                    }
+
+                    // Limpiar la lista de targets eliminados
+                    targets.RemoveAll(item => item == null);
+                    // Asignar el primer target de la lista
+                    if (targets.Count > 0)
+                    {
+                        target = targets[0].gameObject;
+                    }
+                    else
+                    {
+                        target = null;
+                        // Limpiar la lista de objetivos antes de añadir los nuevos detectados
+
+                    }
+
+                    if (targets[0].gameObject)
+                    {
+                        targets.Clear();
+                    }
+                    // Comprobar si el target es null y asignar el siguiente en la lista
+                    if (target == null && targets.Count > 0)
+                    {
+                        AsignarSiguienteTargetSecuencial();
+
+
+                    }
+                    // Mover y atacar al target
+                    if (target != null && Vector3.Distance(transform.position, target.transform.position) < rangoDeteccion)
+                    {
+                        print(target.name);
+                        navMeshAgent.destination = target.transform.position;
+                        if (Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
+                        {
+                            transform.LookAt(target.transform);
+                            animator.SetBool("ataca", true);
+                        }
+                        else
+                        {
+                            //AsignarSiguienteTargetSecuencial();
+                            animator.SetBool("ataca", false);
+                        }
+                    }
+                    else if (seguir && targetSeguir != null)
+                    {
+                        navMeshAgent.destination = targetSeguir.transform.position;
+                        navMeshAgent.isStopped = false; // Asegura que el agente no esté detenido
+                    }
+
+                    /* // Buscar enemigos en el rango de detección
+                     Collider[] colliders = Physics.OverlapSphere(transform.position, rangoDeteccion);
+
+                     // Recorrer los colliders y buscar uno con el tag "Enemigo"
+                     foreach (Collider collider in colliders)
+                     {
+                         if (collider.CompareTag(nombreTagAtacar))
+                         {
+                             // Si se encuentra un enemigo, establecer su posición como destino
+                             navMeshAgent.destination = collider.transform.position;
+                             navMeshAgent.isStopped = false; // Asegura que el agente no esté detenido
+
+                             // Si el enemigo está a una distancia de 4 unidades, activar la función de ataque
+                             if (Vector3.Distance(transform.position, collider.transform.position) <= 4f)
+                             {
+                                 Atacar();
+                             }
+
+                             return; // Salir del loop una vez que se encuentra un enemigo
+                         }
+                     }*/
+                }
+                else
+                {
+                    if (target != null && Vector3.Distance(transform.position, target.transform.position) < rangoDeteccion)
+                    {
+                        navMeshAgent.destination = target.transform.position;
+                        if (Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
+                        {
+                            transform.LookAt(target.transform);
+                            animator.SetBool("ataca", true);
+                        }
+                        else
+                        {
+                            animator.SetBool("ataca", false);
+                        }
+                    }
+                }
+
+                // Buscar enemigos en el rango de detección
+                Collider[] colliders = Physics.OverlapSphere(transform.position, rangoDeteccion);
+
+                // Limpiar la lista de objetivos antes de añadir los nuevos detectados
+                targets.Clear();
+
+                foreach (Collider collider in colliders)
+                {
+                    if (collider.CompareTag(nombreTagAtacar))
+                    {
+                        // Añadir el transform del enemigo a la lista de objetivos
+                        targets.Add(collider.transform);
+
+
+                    }
+                }
+            }
+        }
+
+        private void AsignarSiguienteTargetSecuencial()
+        {
+            /*esperandoEnemigo = false;
+            nextTarget++;
+            if (nextTarget == targets.Count) nextTarget = 0;
+            target = targets[nextTarget].gameObject;
+            navMeshAgent.destination = targets[nextTarget].position;*/
+            if (targets.Count > 0)
+            {
+                targets.RemoveAt(0); // Eliminar el target actual de la lista
+                targets.RemoveAll(item => item == null); // Limpiar la lista de targets eliminados
+                if (targets.Count > 0)
+                {
+                    target = targets[0].gameObject; // Asignar el siguiente target en la lista
+                }
+                else
+                {
+                    target = null;
+                }
+            }
+        }
+
+        public void Atacar()
+        {
+            if (target != null && Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
+            {
+                transform.LookAt(target.transform);
+                animator.SetBool("ataca", true);
+            }
+            else
+            {
+                animator.SetBool("ataca", false);
+            }
+        }
+
+        public void Detenerse()
+        {
+            atacando = true;
+        }
+
+        public void BolaFuego()
+        {
+            GameObject bolaFuego = Instantiate(bolaFuegoPrefab, spawnSlash.position, spawnSlash.rotation);
+            bolaFuego.GetComponent<Rigidbody>().velocity = spawnSlash.forward * velDisparo;
+            StartCoroutine(TiempoMagia(tiempoMagia));
+        }
+
+        public void Moverse()
+        {
+            atacando = false;
+        }
+
+        void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, rangoDeteccion);
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.position, distanciaAtaque);
+        }
+
+        IEnumerator TiempoMagia(float tiempo)
+        {
+            yield return new WaitForSeconds(tiempo);
+            Moverse();
+        }
+    }
+}
+
+
+
+/*using System.Collections;using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
@@ -7,15 +256,27 @@ namespace enemigo
 {
     public class Enemigo : MonoBehaviour
     {
-
+        [Header("Objetivo a seguir")]
+        public float rangoDeteccion = 10.0f;
+        public string nombreTagAtacar = "Player";
+        [Header("Objetivo a seguir")]
+        public bool seguir;
+        public string nombreTagObjetivo;
         public float distanciaAtaque = 1.5f;
+        public float velDisparo = 10;
+        public float tiempoMagia = 2;
+        public GameObject bolaFuegoPrefab;
+        public Transform spawnSlash;
         [Header("Estados Enemigo")]
         public bool atacando = false;
-        [Header("GameObject Player")]
+
         private Animator animator;
         private GameObject target;
+        private GameObject targetSeguir;
+
         private bool muerto;
         public bool congelado = false;
+        private NavMeshAgent navMeshAgent;
 
 
         // Start is called before the first frame update
@@ -26,7 +287,12 @@ namespace enemigo
             cs.sourceTransform = Camera.main.transform;
             GetComponentInChildren<LookAtConstraint>().AddSource(cs);
             animator = GetComponent<Animator>();
-            target = GameObject.Find("Player");
+            target = GameObject.FindWithTag(nombreTagAtacar);
+
+            if (nombreTagObjetivo != "")
+            {
+                targetSeguir = GameObject.FindWithTag(nombreTagObjetivo);
+            }
 
         }
 
@@ -35,29 +301,93 @@ namespace enemigo
         {
             if (!atacando)
             {
-
-                if (Vector3.Distance(transform.position, target.transform.position) < 8)
+                if (seguir)
                 {
-
-
-                    GetComponent<NavMeshAgent>().destination = target.transform.position;
-                    if (Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
+                    if (Vector3.Distance(transform.position, targetSeguir.transform.position) > 3.5)
                     {
-                        transform.LookAt(target.transform);
-                        animator.SetBool("ataca", true);
+                        GetComponent<NavMeshAgent>().destination = targetSeguir.transform.position;
+                        GetComponent<NavMeshAgent>().isStopped = false; // Asegura que el agente no esté detenido
                     }
                     else
                     {
-                        animator.SetBool("ataca", false);
+                        GetComponent<NavMeshAgent>().isStopped = true; // Detiene el agente
+                        transform.LookAt(targetSeguir.transform);
+                    }
+                    /* if (Vector3.Distance(transform.position, target.transform.position) < rangoDeteccion)
+                    {
+                        GetComponent<NavMeshAgent>().destination = target.transform.position;
+                        if (Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
+                        {
+                            transform.LookAt(target.transform);
+                            animator.SetBool("ataca", true);
+                            Detenerse();
+                        }
+                        else
+                        {
+                            animator.SetBool("ataca", false);
+                        }
+                    }*//*
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, rangoDeteccion);
+
+                    // Recorrer los colliders y buscar uno con el tag "Enemigo"
+                    foreach (Collider collider in colliders)
+                    {print("Buscando");
+                        if (collider.CompareTag(nombreTagAtacar))
+                        print(nombreTagAtacar);
+                        {print(" enemigo  ");
+                            // Si se encuentra un enemigo, establecer su posición como destino
+                            navMeshAgent.destination = collider.transform.position;
+                            navMeshAgent.isStopped = false; // Asegura que el agente no esté detenido
+                            return; // Salir del loop una vez que se encuentra un enemigo
+                        }
+                    }
+
+
+
+
+                }
+                else
+                {
+                    if (Vector3.Distance(transform.position, target.transform.position) < rangoDeteccion)
+                    {
+                        GetComponent<NavMeshAgent>().destination = target.transform.position;
+                        if (Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
+                        {
+                            transform.LookAt(target.transform);
+                            animator.SetBool("ataca", true);
+                        }
+                        else
+                        {
+                            animator.SetBool("ataca", false);
+                        }
                     }
                 }
             }
 
+        }
 
+        public void Atacar()
+        {print("ataca");
+
+            if (Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
+            {
+                transform.LookAt(target.transform);
+                animator.SetBool("ataca", true);
+            }
+            else
+            {
+                animator.SetBool("ataca", false);
+            }
         }
         public void Detenerse()
         {
             atacando = true;
+        }
+        public void BolaFuego()
+        {
+            GameObject bolaFuego = Instantiate(bolaFuegoPrefab, spawnSlash.position, spawnSlash.rotation);
+            bolaFuego.GetComponent<Rigidbody>().velocity = spawnSlash.forward * velDisparo;
+            StartCoroutine(TiempoMagia(tiempoMagia));
         }
 
         public void Moverse()
@@ -65,7 +395,23 @@ namespace enemigo
             atacando = false;
         }
 
+        void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, rangoDeteccion);
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.position, distanciaAtaque);
+        }
+
+        IEnumerator TiempoMagia(float tiempo)
+        {
+            print("espera");
+            yield return new WaitForSeconds(tiempo);
+            print("esperado");
+            Moverse();
+        }
+
 
 
     }
-}
+}*/

@@ -95,7 +95,8 @@ public class SistemaVidaEnemigo : MonoBehaviour
                 }
                 break;
             case "DisparoSlash":
-                float slash = other.GetComponentInParent<Stats>().damageDisparo;
+            print("dado ");
+                float slash = GameObject.Find("Player").GetComponentInParent<Stats>().damageDisparo;
                 QuitarVida(slash);
 
 
@@ -106,6 +107,19 @@ public class SistemaVidaEnemigo : MonoBehaviour
                     dado = true;
                 }
                 break;
+            case "BolaFuego":
+            print("dado ");
+                float bola = GameObject.Find("Player").GetComponentInParent<Stats>().damageDisparo;
+                QuitarVida(bola);
+
+
+                if (GetComponent<Stats>().vidaActual >= 0 && !muerto)
+                {
+                    animator.SetBool("caido", true);
+                    animator.SetBool("ataca", false);
+                    dado = true;
+                }
+                break;    
 
         }
 
@@ -166,6 +180,12 @@ public class SistemaVidaEnemigo : MonoBehaviour
         dado = false;
         animator.SetBool("Dado", false);
     }
+    public void QuitarAtaque()
+    {
+        
+        animator.SetBool("ataca", false);
+    }
+    
 
 
 

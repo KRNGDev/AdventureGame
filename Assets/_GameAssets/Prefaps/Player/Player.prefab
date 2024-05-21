@@ -2620,7 +2620,7 @@ MonoBehaviour:
   golpeAlientoLargo: {fileID: 8300000, guid: dc47670854fa0d840b7313392a49eb34, type: 3}
   gritoArea: {fileID: 8300000, guid: 0e926ae55a60de640b00967ba63b07c6, type: 3}
   sonidoEspada: {fileID: 8300000, guid: 86a7d56a4d245d9438e5a339dc9dddc8, type: 3}
-  damage: {fileID: 0}
+  damage: {fileID: 8300000, guid: 38aad6c205f46a842bb7e307f4e84a22, type: 3}
   caida: {fileID: 8300000, guid: 2212795a1e7672a4b9c754a5a3116c44, type: 3}
   muerto: {fileID: 8300000, guid: d712b7a2c019ea343b17ef750aadb00a, type: 3}
   slashFuego: {fileID: 8300000, guid: dc708293f4ef14545bcfe9b1486eb754, type: 3}

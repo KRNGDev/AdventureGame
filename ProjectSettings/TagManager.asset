@@ -20,6 +20,7 @@ TagManager:
   - Enemigo
   - Puntos
   - EspadaEnemiga
+  - BolaFuego
   layers:
   - Default
   - TransparentFX

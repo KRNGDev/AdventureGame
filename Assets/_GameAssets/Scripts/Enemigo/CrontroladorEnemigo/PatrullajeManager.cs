@@ -17,11 +17,12 @@ namespace Enemigo
         private Animator animator;
         private float x, y;
         private bool muerto = false;
+        private bool siguiendo;
 
         private bool esperandoAsignacion = false;
         void Start()
         {
-
+            siguiendo= GetComponent<enemigo.Enemigo>().seguir;
             animator = GetComponent<Animator>();
             navMeshAgent = GetComponent<NavMeshAgent>();
             if (patrullajeAleatorio)
@@ -33,8 +34,9 @@ namespace Enemigo
         void Update()
         {
 
-
+            if(!siguiendo){
             DeterminarSiguienteTarget();
+            }
 
         }
         private void DeterminarSiguienteTarget()

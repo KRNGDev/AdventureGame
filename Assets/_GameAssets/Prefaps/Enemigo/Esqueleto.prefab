@@ -892,7 +892,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &3059158537393456319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,6 +905,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ceefd5b4ae4b7845bb9b92130a69f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rangoDeteccion: 10
+  nombreTagAtacar: Player
+  seguir: 0
+  nombreTagObjetivo: 
+  distanciaAtaque: 1.5
   atacando: 0
   congelado: 0
 --- !u!114 &6249791392528482103
