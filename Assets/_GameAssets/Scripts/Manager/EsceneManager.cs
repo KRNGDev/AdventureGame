@@ -23,7 +23,7 @@ public class EsceneManager : MonoBehaviour
             panelInicio?.SetActive(false);
             panelAcciones?.SetActive(true);
 
-            //main.GetComponent<MainManager>()?.RestoreName();
+            main.GetComponent<MainManager>()?.RestoreName();
         }
         else
         {
@@ -47,8 +47,8 @@ public class EsceneManager : MonoBehaviour
                 GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>().sonidoIntro;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
-            case "posada":
-                SceneManager.LoadScene("posada");
+            case "taberna":
+                SceneManager.LoadScene("Taberna");
                 Time.timeScale = 1;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>().sonidoIntro;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
