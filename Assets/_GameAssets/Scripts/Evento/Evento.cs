@@ -23,9 +23,10 @@ public class Evento : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        dialogo = other.GetComponent<Dialogos>();
+
         if (other.CompareTag("Player"))
         {
+            dialogo = other.GetComponent<Dialogos>();
             MirarEvento();
 
         }

@@ -23,7 +23,7 @@ public class EsceneManager : MonoBehaviour
             panelInicio?.SetActive(false);
             panelAcciones?.SetActive(true);
 
-            main.GetComponent<MainManager>()?.RestoreName();
+            //main.GetComponent<MainManager>()?.RestoreName();
         }
         else
         {

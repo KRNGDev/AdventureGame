@@ -3136,10 +3136,13 @@ MonoBehaviour:
   nombreTagObjetivo: 
   distanciaAtaque: 3
   velDisparo: 10
+  tiempoMagia: 2
   bolaFuegoPrefab: {fileID: 0}
   spawnSlash: {fileID: 0}
   atacando: 0
   congelado: 0
+  tiempoEspera: 0.5
+  targets: []
 --- !u!114 &9073253451188946149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3443,7 +3446,7 @@ Transform:
   m_GameObject: {fileID: 6638736228496489634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.761875, y: 9.998171, z: 17.77538}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

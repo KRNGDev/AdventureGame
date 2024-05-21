@@ -22,7 +22,7 @@ namespace Enemigo
         private bool esperandoAsignacion = false;
         void Start()
         {
-            siguiendo= GetComponent<enemigo.Enemigo>().seguir;
+            siguiendo = GetComponent<enemigo.Enemigo>().seguir;
             animator = GetComponent<Animator>();
             navMeshAgent = GetComponent<NavMeshAgent>();
             if (patrullajeAleatorio)
@@ -34,22 +34,16 @@ namespace Enemigo
         void Update()
         {
 
-            if(!siguiendo){
-            DeterminarSiguienteTarget();
+            if (!siguiendo)
+            {
+                DeterminarSiguienteTarget();
             }
 
         }
         private void DeterminarSiguienteTarget()
         {
 
-            x = 0;
-            y = navMeshAgent.velocity.magnitude;
-            muerto = GetComponent<SistemaVidaEnemigo>().muerto;
 
-
-
-            animator.SetFloat("X", x);
-            animator.SetFloat("Y", y);
             if (esperandoAsignacion) return;
             if (!navMeshAgent.pathPending)
             {
@@ -76,9 +70,13 @@ namespace Enemigo
         }
         private void AsignarSiguienteTargetAleatorio()
         {
+            print("patrullaje activo");
             esperandoAsignacion = false;
             nextTarget = Random.Range(0, targets.Count);
-            navMeshAgent.destination = targets[nextTarget].position;
+            if (!siguiendo)
+            {
+                navMeshAgent.destination = targets[nextTarget].position;
+            }
         }
         private void AsignarSiguienteTargetSecuencial()
         {

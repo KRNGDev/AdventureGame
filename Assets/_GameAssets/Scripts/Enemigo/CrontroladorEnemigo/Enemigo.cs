@@ -2,6 +2,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using Enemigo;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
@@ -57,24 +58,27 @@ namespace enemigo
 
         void Update()
         {
+
             if (!atacando)
             {
+                x = 0;
+                y = navMeshAgent.velocity.magnitude;
+                muerto = GetComponent<SistemaVidaEnemigo>().muerto;
 
+
+
+                animator.SetFloat("X", x);
+                animator.SetFloat("Y", y);
+                BuscarEnemigos();
+                targets.RemoveAll(item => item == null || item.gameObject == null);
                 if (seguir)
                 {
-                    if (targetSeguir != null && Vector3.Distance(transform.position, targetSeguir.transform.position) > 3.5f)
-                    {
-                        navMeshAgent.destination = targetSeguir.transform.position;
-                        navMeshAgent.isStopped = false; // Asegura que el agente no esté detenido
-                    }
-                    else if (targetSeguir != null)
-                    {
-                        navMeshAgent.isStopped = true; // Detiene el agente
-                        transform.LookAt(targetSeguir.transform);
-                    }
+                    // GetComponent<PatrullajeManager>().enabled = false;
+                    SeguirJugador();
 
-                    // Limpiar la lista de targets eliminados
-                    targets.RemoveAll(item => item == null);
+                    // Limpiar la lista de targets eliminados o fuera del rango de detección
+                    targets.RemoveAll(item => item == null || Vector3.Distance(transform.position, item.position) > rangoDeteccion);
+
                     // Asignar el primer target de la lista
                     if (targets.Count > 0)
                     {
@@ -83,25 +87,23 @@ namespace enemigo
                     else
                     {
                         target = null;
-                        // Limpiar la lista de objetivos antes de añadir los nuevos detectados
-
                     }
 
-                    if (targets[0].gameObject)
+                    // Buscar enemigos si no hay un target válido
+                    if (target == null)
                     {
-                        targets.Clear();
+                        BuscarEnemigos();
                     }
+
                     // Comprobar si el target es null y asignar el siguiente en la lista
                     if (target == null && targets.Count > 0)
                     {
                         AsignarSiguienteTargetSecuencial();
-
-
                     }
+
                     // Mover y atacar al target
                     if (target != null && Vector3.Distance(transform.position, target.transform.position) < rangoDeteccion)
                     {
-                        print(target.name);
                         navMeshAgent.destination = target.transform.position;
                         if (Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
                         {
@@ -110,70 +112,71 @@ namespace enemigo
                         }
                         else
                         {
-                            //AsignarSiguienteTargetSecuencial();
                             animator.SetBool("ataca", false);
                         }
                     }
                     else if (seguir && targetSeguir != null)
                     {
-                        navMeshAgent.destination = targetSeguir.transform.position;
+                        SeguirJugador();
                         navMeshAgent.isStopped = false; // Asegura que el agente no esté detenido
                     }
-
-                    /* // Buscar enemigos en el rango de detección
-                     Collider[] colliders = Physics.OverlapSphere(transform.position, rangoDeteccion);
-
-                     // Recorrer los colliders y buscar uno con el tag "Enemigo"
-                     foreach (Collider collider in colliders)
-                     {
-                         if (collider.CompareTag(nombreTagAtacar))
-                         {
-                             // Si se encuentra un enemigo, establecer su posición como destino
-                             navMeshAgent.destination = collider.transform.position;
-                             navMeshAgent.isStopped = false; // Asegura que el agente no esté detenido
-
-                             // Si el enemigo está a una distancia de 4 unidades, activar la función de ataque
-                             if (Vector3.Distance(transform.position, collider.transform.position) <= 4f)
-                             {
-                                 Atacar();
-                             }
-
-                             return; // Salir del loop una vez que se encuentra un enemigo
-                         }
-                     }*/
                 }
                 else
                 {
-                    if (target != null && Vector3.Distance(transform.position, target.transform.position) < rangoDeteccion)
-                    {
-                        navMeshAgent.destination = target.transform.position;
-                        if (Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
-                        {
-                            transform.LookAt(target.transform);
-                            animator.SetBool("ataca", true);
-                        }
-                        else
-                        {
-                            animator.SetBool("ataca", false);
-                        }
-                    }
+
+                    ComportamientoEnemigo();
                 }
+            }
+        }
 
-                // Buscar enemigos en el rango de detección
-                Collider[] colliders = Physics.OverlapSphere(transform.position, rangoDeteccion);
-
-                // Limpiar la lista de objetivos antes de añadir los nuevos detectados
-                targets.Clear();
-
-                foreach (Collider collider in colliders)
+        private void ComportamientoEnemigo()
+        {
+            GetComponent<PatrullajeManager>().enabled = true;
+            if (target != null && Vector3.Distance(transform.position, target.transform.position) < rangoDeteccion)
+            {
+                navMeshAgent.destination = target.transform.position;
+                if (Vector3.Distance(transform.position, target.transform.position) < distanciaAtaque)
                 {
-                    if (collider.CompareTag(nombreTagAtacar))
-                    {
-                        // Añadir el transform del enemigo a la lista de objetivos
-                        targets.Add(collider.transform);
+                    transform.LookAt(target.transform);
+                    animator.SetBool("ataca", true);
+                }
+                else
+                {
+                    animator.SetBool("ataca", false);
+                }
+            }
+        }
+
+        private void SeguirJugador()
+        {
+            if (targetSeguir != null && Vector3.Distance(transform.position, targetSeguir.transform.position) > 3.5f)
+            {
+                navMeshAgent.destination = targetSeguir.transform.position;
+                navMeshAgent.isStopped = false; // Asegura que el agente no esté detenido
+            }
+            else if (targetSeguir != null)
+            {
+                navMeshAgent.isStopped = true; // Detiene el agente
+                transform.LookAt(targetSeguir.transform);
+            }
+        }
+
+        private void BuscarEnemigos()
+        {
+            // Buscar enemigos en el rango de detección
+            Collider[] colliders = Physics.OverlapSphere(transform.position, rangoDeteccion);
+
+            // Limpiar la lista de objetivos antes de añadir los nuevos detectados
+            targets.Clear();
+
+            foreach (Collider collider in colliders)
+            {
+                if (collider.CompareTag(nombreTagAtacar))
+                {
+                    // Añadir el transform del enemigo a la lista de objetivos
+                    targets.Add(collider.transform);
 
 
-                    }
                 }
             }
         }
