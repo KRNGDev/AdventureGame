@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject prefabItemPanel;
     public TextMeshProUGUI nombre;
     public bool condicion = false;
+    public bool espada = false;
     private GameObject player;
 
 
@@ -189,10 +190,17 @@ public class GameManager : MonoBehaviour
 
     public void SumarPuntos()
     {
-        print("Sumar");
+        
         textoPunto = GameObject.Find("TextoPuntos").GetComponent<TextMeshProUGUI>();
-        print(textoPunto.text);
         puntosActuales++;
+        textoPunto.text = "" + puntosActuales;
+
+    }
+     public void QuitarPuntos()
+    {
+        print("Quita");
+        textoPunto = GameObject.Find("TextoPuntos").GetComponent<TextMeshProUGUI>();       
+        puntosActuales--;
         textoPunto.text = "" + puntosActuales;
 
     }

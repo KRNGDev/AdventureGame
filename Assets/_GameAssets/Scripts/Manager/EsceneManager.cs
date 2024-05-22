@@ -39,24 +39,36 @@ public class EsceneManager : MonoBehaviour
             case "exterior":
                 SceneManager.LoadScene("Exterior");
                 Time.timeScale = 1;
-                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>().sonidoBack;
+                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoBack;
+                GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
+                break;
+            case "casa1":
+                SceneManager.LoadScene("Casa1");
+                Time.timeScale = 1;
+                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoBack;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
             case "intro":
                 SceneManager.LoadScene("intro");
-                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>().sonidoIntro;
+                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoIntro;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
             case "taberna":
                 SceneManager.LoadScene("Taberna");
                 Time.timeScale = 1;
-                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>().sonidoIntro;
+                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoIntro;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
             case "dungeon":
                 SceneManager.LoadScene("Dungeon");
                 Time.timeScale = 1;
-                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>().sonidoIntro;
+                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoIntro;
+                GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
+                break;
+            case "bosque":
+                SceneManager.LoadScene("Bosque");
+                Time.timeScale = 1;
+                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoIntro;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
             case "salir":

@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/_GameAssets/Scenes/Dungeon.unity
     guid: 5ceea78b18824204ead99862b60a33f4
   - enabled: 1
+    path: Assets/_GameAssets/Scenes/Bosque.unity
+    guid: dace8e4dc32ea514297f886476a69625
+  - enabled: 1
     path: Assets/_GameAssets/Scenes/Taberna.unity
     guid: 3fe23306301860240930278b13f1174a
+  - enabled: 1
+    path: Assets/_GameAssets/Scenes/Casa1.unity
+    guid: 6c1e202d1c7e6284fabd7660ff583506
   m_configObjects: {}

@@ -8,9 +8,9 @@ namespace Player
     {
         #region Variables
         public Transform m_target;
-        public float m_Altura = 12;
-        public float m_Distancia = 7;
-        public float m_Angulo = 30f;
+        public float m_Altura = 16;
+        public float m_Distancia = 5;
+        public float m_Angulo = -5;
         public float m_SmoothSpeed = 1f;
         public string aquienSeguir = "";
 

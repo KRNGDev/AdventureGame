@@ -106,10 +106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_target: {fileID: 0}
-  m_Altura: 12
-  m_Distancia: 7
-  m_Angulo: 30
+  m_Altura: 16
+  m_Distancia: 5
+  m_Angulo: -5
   m_SmoothSpeed: 1
   aquienSeguir: Player
-  canvas: 0
-  VelReferencia: {x: 0, y: 0, z: 0}
+  canvas: 1
+  VelReferencia: {x: 0.018007105, y: 0, z: 0.19670793}

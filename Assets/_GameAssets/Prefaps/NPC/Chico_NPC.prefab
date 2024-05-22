@@ -641,7 +641,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.9990245, z: -0, w: -0.04415941}
   m_LocalPosition: {x: -21.88, y: 9.837929, z: -8.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8381389402584416363}
   - {fileID: 4741438454256034374}
@@ -709,8 +709,7 @@ MonoBehaviour:
   tieneCondicion: 0
   hablado: 0
   dialogo2: 
-  panelDialogos: {fileID: 1332383534826950567, guid: c05c87f9ff85d684e823769d13df6718,
-    type: 3}
+  panelDialogos: {fileID: 1332383534826950567, guid: c05c87f9ff85d684e823769d13df6718, type: 3}
 --- !u!135 &4402799241913293784
 SphereCollider:
   m_ObjectHideFlags: 0

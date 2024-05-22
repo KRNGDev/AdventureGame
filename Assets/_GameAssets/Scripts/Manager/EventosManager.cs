@@ -15,6 +15,10 @@ public class EventosManager : MonoBehaviour
                 porton.GetComponent<Animator>().SetBool("Abrir", true);
 
                 break;
+            case "espada":
+                GameObject.Find("Espada_Corta_A").SetActive(true);
+
+                break;
         }
     }
 }
