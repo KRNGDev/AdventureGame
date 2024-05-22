@@ -22,18 +22,12 @@ namespace CameraUtil
         Vector3 rotatedVector;
         Quaternion playerRotation;
         Vector3 cameraOffset;
-       
+
         void Start()
         {
-            print("Start");
-            if (GameObject.FindGameObjectsWithTag(targetTag).Length != 1)
-            {
-                Debug.LogError("No se encuentra el tag del target o hay más de uno");
-            }
-            else
-            {
-                target = GameObject.FindGameObjectWithTag(targetTag).transform;
-            }
+
+            target = GameObject.Find(targetTag).transform;
+
         }
 
         void Update()

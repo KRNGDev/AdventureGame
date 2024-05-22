@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402185, g: 0.49316466, b: 0.57223153, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MesaTaberna01
       objectReference: {fileID: 0}
+    - target: {fileID: 482045616964953262, guid: 4cf089902d1e69f48be654fd789a2cee, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     - target: {fileID: 5951978601008100216, guid: 4cf089902d1e69f48be654fd789a2cee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.33
@@ -196,6 +200,10 @@ PrefabInstance:
     - target: {fileID: 5994607674021740567, guid: ceddce4fa21192b4894d7164957a9fa9, type: 3}
       propertyPath: m_Name
       value: 05_Vault_01_Chest_Bottom#1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994607674021740567, guid: ceddce4fa21192b4894d7164957a9fa9, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     - target: {fileID: 6375636129220516525, guid: ceddce4fa21192b4894d7164957a9fa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -294,6 +302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 03_Blacksmith_01_AnvilStand
       objectReference: {fileID: 0}
+    - target: {fileID: 5220034004406118784, guid: a20ce41344aafe441a6a2effbc752c3e, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -381,6 +393,10 @@ PrefabInstance:
     - target: {fileID: 9159140522573038930, guid: 865ce0ffbc6ec67439fa4bc74c14bd0d, type: 3}
       propertyPath: m_Name
       value: 04_Bedroom_01_Beed_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159140522573038930, guid: 865ce0ffbc6ec67439fa4bc74c14bd0d, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -531,6 +547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 03_Blacksmith_01_Forge
       objectReference: {fileID: 0}
+    - target: {fileID: 6591814435315512985, guid: 375aacc276d724f41b0baa76221478d3, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -607,6 +627,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 04_Bedroom_01_Matrace_ForBeed_2
       objectReference: {fileID: 0}
+    - target: {fileID: 5634960524138223070, guid: fa8c17aa3090c2a4e993067b09233bb2, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -623,6 +647,10 @@ PrefabInstance:
     - target: {fileID: 2861805725613421835, guid: 7bd3fc177c86cf84a8b27ba2398c2977, type: 3}
       propertyPath: m_Name
       value: 03_Blacksmith_01_GrindingWheel_Wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861805725613421835, guid: 7bd3fc177c86cf84a8b27ba2398c2977, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     - target: {fileID: 3241744598832099249, guid: 7bd3fc177c86cf84a8b27ba2398c2977, type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,6 +859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 97_Othert_Amphora_Destroyable
       objectReference: {fileID: 0}
+    - target: {fileID: 4483456969399566553, guid: 22c3c9f59017bab44a6af40069e7785f, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -888,6 +920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 05_Vault_01_Chest_Top#1
       objectReference: {fileID: 0}
+    - target: {fileID: 7670171143649940076, guid: 7bc40f2a5b27761468e228e387db9d0e, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -909,6 +945,10 @@ PrefabInstance:
     - target: {fileID: 1426254898626095101, guid: 6c4f80978ba9d5643881d5508aee3dba, type: 3}
       propertyPath: m_Name
       value: 03_Blacksmith_01_Anvil
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426254898626095101, guid: 6c4f80978ba9d5643881d5508aee3dba, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1765626466226453831, guid: 6c4f80978ba9d5643881d5508aee3dba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1069,6 +1109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 03_Blacksmith_01_Hammer#2
       objectReference: {fileID: 0}
+    - target: {fileID: 8515627493661167162, guid: d71513e356a6264478e901eb30867760, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     - target: {fileID: 9035987471028524160, guid: d71513e356a6264478e901eb30867760, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.579284
@@ -1125,6 +1169,10 @@ PrefabInstance:
     - target: {fileID: 3673454366023643128, guid: 3df9b2ddf5f6382488f21cad82623b16, type: 3}
       propertyPath: m_Name
       value: 97_Othert_Barrel_MK2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673454366023643128, guid: 3df9b2ddf5f6382488f21cad82623b16, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     - target: {fileID: 4157222561857549634, guid: 3df9b2ddf5f6382488f21cad82623b16, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1248,6 +1296,10 @@ PrefabInstance:
     - target: {fileID: 4955705534400271548, guid: 6fbf4207e2fef5e4687d16c507fc055b, type: 3}
       propertyPath: m_Name
       value: 03_Blacksmith_01_WoodenRack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955705534400271548, guid: 6fbf4207e2fef5e4687d16c507fc055b, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     - target: {fileID: 5732487772513357318, guid: 6fbf4207e2fef5e4687d16c507fc055b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1451,6 +1503,10 @@ PrefabInstance:
     - target: {fileID: 4498884702426641234, guid: 337841c711a168941bad28c82c132574, type: 3}
       propertyPath: m_Name
       value: 02_Kitchen_01_WoodenTable#2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498884702426641234, guid: 337841c711a168941bad28c82c132574, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1657,6 +1713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 02_Kitchen_01_CuttingBoard
       objectReference: {fileID: 0}
+    - target: {fileID: 7233478144244015967, guid: 971e70123fa0f8540bb03284db541417, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     - target: {fileID: 8010121019455388133, guid: 971e70123fa0f8540bb03284db541417, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.4353886
@@ -1713,6 +1773,10 @@ PrefabInstance:
     - target: {fileID: 441142435037788078, guid: 1dba64d63b3ff9545af2152cc3320b9a, type: 3}
       propertyPath: m_Name
       value: 04_Bedroom_01_Matrace_ForBeed_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 441142435037788078, guid: 1dba64d63b3ff9545af2152cc3320b9a, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     - target: {fileID: 960551059958754580, guid: 1dba64d63b3ff9545af2152cc3320b9a, type: 3}
       propertyPath: m_LocalScale.x
@@ -1791,6 +1855,10 @@ PrefabInstance:
     - target: {fileID: 1635295810059159630, guid: 2aa6286db4bf6c24ba9c943b1b942f94, type: 3}
       propertyPath: m_Name
       value: 02_Kitchen_01_CookingPot#3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635295810059159630, guid: 2aa6286db4bf6c24ba9c943b1b942f94, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2160158047634363124, guid: 2aa6286db4bf6c24ba9c943b1b942f94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1893,6 +1961,10 @@ PrefabInstance:
     - target: {fileID: 948473418716145100, guid: 793d90f1b3ced354d80bd73df4e73c1e, type: 3}
       propertyPath: m_Name
       value: 03_Blacksmith_01_IronBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 948473418716145100, guid: 793d90f1b3ced354d80bd73df4e73c1e, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2218,7 +2290,7 @@ GameObject:
   - component: {fileID: 1355070216}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2499,6 +2571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 03_Blacksmith_01_GrindingWheel_Frame
       objectReference: {fileID: 0}
+    - target: {fileID: 1213575154955037221, guid: 53ae3832d83089f4abb4091017ba91f6, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     - target: {fileID: 1989654805070868639, guid: 53ae3832d83089f4abb4091017ba91f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.7163925
@@ -2742,6 +2818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 02_Kitchen_01_SpoonBucket
       objectReference: {fileID: 0}
+    - target: {fileID: 3105527397977821648, guid: 70aff6ca55ad79544b118701d9ec1295, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2814,6 +2894,10 @@ PrefabInstance:
     - target: {fileID: 9159140522573038930, guid: 865ce0ffbc6ec67439fa4bc74c14bd0d, type: 3}
       propertyPath: m_Name
       value: 04_Bedroom_01_Beed_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159140522573038930, guid: 865ce0ffbc6ec67439fa4bc74c14bd0d, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3052,6 +3136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MesaTabernaRedonda
       objectReference: {fileID: 0}
+    - target: {fileID: 3136303450556722888, guid: 672a6277229f65642a3fc54469da32d3, type: 3}
+      propertyPath: m_TagString
+      value: suelo
+      objectReference: {fileID: 0}
     - target: {fileID: 8531014400138308120, guid: 672a6277229f65642a3fc54469da32d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.29
@@ -3148,6 +3236,10 @@ PrefabInstance:
     - target: {fileID: 3469899702990842955, guid: a25ac64937a920b46ace9abb99ca08a3, type: 3}
       propertyPath: m_Name
       value: Almacenaje
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469899702990842955, guid: a25ac64937a920b46ace9abb99ca08a3, type: 3}
+      propertyPath: m_TagString
+      value: suelo
       objectReference: {fileID: 0}
     - target: {fileID: 5537902546476461701, guid: a25ac64937a920b46ace9abb99ca08a3, type: 3}
       propertyPath: m_LocalPosition.x

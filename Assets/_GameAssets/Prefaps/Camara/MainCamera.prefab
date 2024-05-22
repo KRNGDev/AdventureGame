@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5363673634107919720}
   - component: {fileID: 4235052169221098300}
   - component: {fileID: 4698649218517465874}
-  - component: {fileID: 5537796215997064413}
+  - component: {fileID: 5268527251252368331}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -66,8 +66,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  far clip plane: 2000
+  field of view: 74
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -93,7 +93,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5659908548192121460}
   m_Enabled: 0
---- !u!114 &5537796215997064413
+--- !u!114 &5268527251252368331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,10 +106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_target: {fileID: 0}
-  m_Altura: 16
+  m_Altura: 12
   m_Distancia: 5
-  m_Angulo: -5
-  m_SmoothSpeed: 1
+  m_Angulo: 0
+  m_SmoothSpeed: 0.3
   aquienSeguir: Player
   canvas: 1
-  VelReferencia: {x: 0.018007105, y: 0, z: 0.19670793}
+  VelReferencia: {x: -0.0019787424, y: -0.012382489, z: 0.0004238127}
