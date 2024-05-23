@@ -3018,7 +3018,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 178
+  Priority: 201
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 5
@@ -3137,8 +3137,8 @@ MonoBehaviour:
   distanciaAtaque: 3
   velDisparo: 10
   tiempoMagia: 2
-  bolaFuegoPrefab: {fileID: 0}
-  spawnSlash: {fileID: 0}
+  bolaFuegoPrefab: {fileID: 2287638563956292804, guid: bfd4412b6123e6b469e16447470e61d3, type: 3}
+  spawnSlash: {fileID: 1868699466047366485}
   atacando: 0
   congelado: 0
   tiempoEspera: 0.5
