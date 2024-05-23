@@ -326,8 +326,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7746591558165638432}
     m_Modifications:
     - target: {fileID: 309908454665629572, guid: effb650189dc5714e9e9801b1cfb3991, type: 3}
+      propertyPath: m_Range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 309908454665629572, guid: effb650189dc5714e9e9801b1cfb3991, type: 3}
       propertyPath: m_Intensity
-      value: 0
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 309908454665629572, guid: effb650189dc5714e9e9801b1cfb3991, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 496487244642044109, guid: effb650189dc5714e9e9801b1cfb3991, type: 3}
       propertyPath: looping
