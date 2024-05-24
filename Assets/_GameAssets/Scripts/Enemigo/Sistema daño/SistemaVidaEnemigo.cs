@@ -39,6 +39,7 @@ public class SistemaVidaEnemigo : MonoBehaviour
             if (GetComponent<EnemigoFinal>() == true)
             {
                 GameObject gameOver = Instantiate(GetComponent<EnemigoFinal>()?.panelFinal);
+                Time.timeScale = 0;
 
             }
 
