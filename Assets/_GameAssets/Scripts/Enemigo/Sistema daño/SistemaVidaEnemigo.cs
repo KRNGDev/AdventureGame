@@ -33,11 +33,15 @@ public class SistemaVidaEnemigo : MonoBehaviour
         sliderVida.maxValue = GetComponent<Stats>().vidaMax;
         sliderVida.value = GetComponent<Stats>().vidaActual;
         if (GetComponent<Stats>().vidaActual <= 0 && !muerto)
-        {print("MUerto  ");
+        {
+            print("MUerto  ");
             muerto = true;
-            GameObject gameOver=Instantiate(GetComponent<EnemigoFinal>()?.panelFinal);
-            GameObject canvas=GameObject.Find("IU");
-            gameOver.transform.parent = canvas.transform;
+            if (GetComponent<EnemigoFinal>() == true)
+            {
+                GameObject gameOver = Instantiate(GetComponent<EnemigoFinal>()?.panelFinal);
+                GameObject canvas = GameObject.Find("IU");
+                gameOver.transform.parent = canvas.transform;
+            }
 
             animator.SetBool("muerto", true);
         }
@@ -99,7 +103,7 @@ public class SistemaVidaEnemigo : MonoBehaviour
                 }
                 break;
             case "DisparoSlash":
-            print("dado ");
+                print("dado ");
                 float slash = GameObject.Find("Player").GetComponentInParent<Stats>().damageDisparo;
                 QuitarVida(slash);
 
@@ -112,7 +116,7 @@ public class SistemaVidaEnemigo : MonoBehaviour
                 }
                 break;
             case "BolaFuego":
-            print("dado ");
+                print("dado ");
                 float bola = GameObject.Find("Player").GetComponentInParent<Stats>().damageDisparo;
                 QuitarVida(bola);
 
@@ -123,7 +127,7 @@ public class SistemaVidaEnemigo : MonoBehaviour
                     animator.SetBool("ataca", false);
                     dado = true;
                 }
-                break;    
+                break;
 
         }
 
@@ -186,10 +190,10 @@ public class SistemaVidaEnemigo : MonoBehaviour
     }
     public void QuitarAtaque()
     {
-        
+
         animator.SetBool("ataca", false);
     }
-    
+
 
 
 
