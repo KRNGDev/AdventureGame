@@ -12,6 +12,7 @@ namespace enemigo
     public class Enemigo : MonoBehaviour
     {
         [Header("Objetivo a seguir")]
+        public float damage = 2;
         public float rangoDeteccion = 10.0f;
         public string nombreTagAtacar = "Player";
         [Header("Objetivo a seguir")]

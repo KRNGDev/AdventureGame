@@ -135,7 +135,7 @@ public class AtaquePlayer : MonoBehaviour
     }
     public void AtaqueEspecial()
     {
-        if (!cargandoEspecial)
+        if (!cargandoEspecial&& gm.GetComponent<ItemManager>().espada == true)
         {
 
             imagenEspecial.fillAmount = 0;
@@ -150,7 +150,7 @@ public class AtaquePlayer : MonoBehaviour
     }
     public void AtaqueDistancia()
     {
-        if (!cargandoDisparo)
+        if (!cargandoDisparo && gm.GetComponent<ItemManager>().espada == true)
         {
 
             imagenDisparo.fillAmount = 0;
@@ -164,7 +164,7 @@ public class AtaquePlayer : MonoBehaviour
     }
     public void AtaqueArea()
     {
-        if (!cargandoArea)
+        if (!cargandoArea )
         {
             GetComponent<ControlPlayer>().atacando = true;
             imagenArea.fillAmount = 0;

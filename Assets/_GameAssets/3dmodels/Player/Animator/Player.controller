@@ -1333,9 +1333,6 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Dado
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
     m_ConditionEvent: muerto
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}

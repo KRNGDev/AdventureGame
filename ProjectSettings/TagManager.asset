@@ -21,6 +21,7 @@ TagManager:
   - Puntos
   - EspadaEnemiga
   - BolaFuego
+  - LanzaLlamas
   layers:
   - Default
   - TransparentFX

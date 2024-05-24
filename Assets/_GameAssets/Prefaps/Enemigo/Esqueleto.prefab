@@ -910,8 +910,14 @@ MonoBehaviour:
   seguir: 0
   nombreTagObjetivo: 
   distanciaAtaque: 1.5
+  velDisparo: 10
+  tiempoMagia: 2
+  bolaFuegoPrefab: {fileID: 0}
+  spawnSlash: {fileID: 0}
   atacando: 0
   congelado: 0
+  tiempoEspera: 0.5
+  targets: []
 --- !u!114 &6249791392528482103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,7 +1115,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1.5
+  m_Speed: 2.2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 200

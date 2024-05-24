@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using enemigo;
 using Enemigo;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -32,8 +33,11 @@ public class SistemaVidaEnemigo : MonoBehaviour
         sliderVida.maxValue = GetComponent<Stats>().vidaMax;
         sliderVida.value = GetComponent<Stats>().vidaActual;
         if (GetComponent<Stats>().vidaActual <= 0 && !muerto)
-        {
+        {print("MUerto  ");
             muerto = true;
+            GameObject gameOver=Instantiate(GetComponent<EnemigoFinal>()?.panelFinal);
+            GameObject canvas=GameObject.Find("IU");
+            gameOver.transform.parent = canvas.transform;
 
             animator.SetBool("muerto", true);
         }

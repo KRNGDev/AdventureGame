@@ -35,9 +35,10 @@ public class PowerUp : MonoBehaviour
             {
                 gm.inventarioEquipacion.Add(item);
             }
+            
         }
 
-
+        gm.CargarObjetos();
         Instantiate(pickupEffect, transform.position, transform.rotation);
 
 

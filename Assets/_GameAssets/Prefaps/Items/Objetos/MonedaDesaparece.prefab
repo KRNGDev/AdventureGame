@@ -82971,7 +82971,7 @@ GameObject:
   - component: {fileID: 7888857835762348652}
   - component: {fileID: 7888857835762348947}
   - component: {fileID: 1349433863952264196}
-  - component: {fileID: 3856087479537071589}
+  - component: {fileID: 2697201338000302427}
   m_Layer: 0
   m_Name: MonedaDesaparece
   m_TagString: Untagged
@@ -87833,7 +87833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoDeVida: 2
---- !u!82 &3856087479537071589
+--- !u!82 &2697201338000302427
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87845,16 +87845,16 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cf424dae40526fe4781a31402d04f5d9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.288
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 197
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -87889,7 +87889,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.314
       inSlope: 0
       outSlope: 0
       tangentMode: 0

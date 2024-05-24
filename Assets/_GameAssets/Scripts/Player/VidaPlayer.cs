@@ -58,14 +58,22 @@ public class VidaPlayer : MonoBehaviour
         {
 
 
-            int damage = 2;//enemigo.puntosDano;
+            int damage =2;
             QuitarVida(damage);
             GetComponent<Animator>().SetBool("Dado", true);
             dado = true;
             GetComponent<ControlPlayer>().enabled = false;
 
+        }
+        if (other.gameObject.CompareTag("LanzaLlamas") && !dado)
+        {
 
 
+            int damage = 5;
+            QuitarVida(damage);
+            GetComponent<Animator>().SetBool("Dado", true);
+            dado = true;
+            GetComponent<ControlPlayer>().enabled = false;
 
         }
 
