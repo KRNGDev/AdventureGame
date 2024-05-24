@@ -816,7 +816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rangoDeteccion: 15
   nombreTagAtacar: Player
-  panelFinal: {fileID: 2919045381214346254, guid: 58a28bda40bc9a34e9774f90735ee693, type: 3}
+  panelFinal: {fileID: 2119784245224050102, guid: b02caf5ccd76dea4ea4d568fe0aa3cee, type: 3}
   seguir: 0
   nombreTagObjetivo: 
   distanciaAtaque: 6
