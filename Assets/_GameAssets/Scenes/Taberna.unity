@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -151,6 +151,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: Reinols
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "S\xED, el de enfrente parece muy gen\xE9rico, \xBFno crees?"
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC (2)
@@ -227,7 +243,8 @@ PrefabInstance:
       propertyPath: hablado
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -608,6 +625,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: nombreNPC
+      value: Torrezno
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: Despeus de un dia duro de no hacer nada ... siempre es bueno beber y
+        beber
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: Como los peces en ele rio...
+      objectReference: {fileID: 0}
     - target: {fileID: 1610927340615805648, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.57
@@ -648,6 +686,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2148112819874793794, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2176194015505376863, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_Name
       value: Soldado_NPC
@@ -668,7 +710,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.45510152
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4359813590797051415, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1148089792916131933, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
@@ -2398,6 +2441,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: El Pelas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "\xA1Oh, vaya! Parece que te est\xE1s quedando sin ideas. \xA1Claro
+        que s\xE9 qu\xE9 son las monedas! Aunque mi apariencia no sea la m\xE1s lujosa,
+        conozco bien su valor."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "Mira, a m\xED me sobra una. Aqu\xED te doy una. Adem\xE1s de servir
+        para aumentar tu puntuaci\xF3n al final del viaje, sirve para comprar alg\xFAn
+        objeto."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[2]
+      value: "\xA1Disfrutala!"
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC (9)
@@ -2474,7 +2545,8 @@ PrefabInstance:
       propertyPath: hablado
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3272,6 +3344,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: Gustavo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "Para usar bien una poci\xF3n, debes meterte en tu inventario. En la
+        secci\xF3n de Objetos podr\xE1s usar las pociones que tienes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "\xBFA qui\xE9n se le ocurrir\xEDa, en medio de la batalla, tener botellas
+        de cristal sueltas y ponerse a beber una? \xA1Es de locos!"
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC (6)
@@ -3348,7 +3442,8 @@ PrefabInstance:
       propertyPath: hablado
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4552,6 +4647,60 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: nombreNPC
+      value: Tabernera
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: objetoSpaw
+      value: 
+      objectReference: {fileID: 2713001148876857958, guid: de51fd3014874194e823b9e17a697725, type: 3}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: puntoSpawn
+      value: 
+      objectReference: {fileID: 561087870}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: nombreEvento
+      value: espada
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "Buenos d\xEDas, muchacho. En estos tiempos que corren, son muy peligrosos.
+        \xBFQu\xE9 deseas?"
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "Una espada... \xA1esto es una taberna! Pues claro que tengo espadas.
+        De hecho, tengo una que solemos usar para darle vuelta al cocido."
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[2]
+      value: "Por una moneda de oro, puedes llev\xE1rtela. Es una espada resistente
+        y bien afilada. \xA1Te ser\xE1 de gran ayuda en estos tiempos peligrosos!"
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo2.Array.data[0]
+      value: "\xA1Excelente hacer negocios contigo, joven! Aqu\xED tienes tu pedido,
+        que lo disfrutes. Si necesitas saciar el hambre, siempre puedes chupar el
+        filo, a\xFAn tiene restos de comida. \xA1Ja, ja, ja!"
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo2.Array.data[1]
+      value: "\xA1Mucha suerte all\xED fuera! \xA1Que los dioses te acompa\xF1en
+        en tu viaje! \xA1Regresa pronto y cu\xE9ntanos tus aventuras!"
+      objectReference: {fileID: 0}
     - target: {fileID: 1716885042210961735, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
       propertyPath: m_Name
       value: Chica_NPC
@@ -4664,7 +4813,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 1.5778967
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7330988736229998512, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5487,6 +5637,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: NPC 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: <p>$dialogoGenerico</p>
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC (3)
@@ -5563,7 +5729,8 @@ PrefabInstance:
       propertyPath: hablado
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7395,6 +7562,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: nombreNPC
+      value: Pepita
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "Ese de all\xED me mira raro, no s\xE9 qu\xE9 le pasa."
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "Me da miedo que me despiste y me ataque. Lo mejor ser\xE1 quedarme
+        mir\xE1ndolo fijamente."
+      objectReference: {fileID: 0}
     - target: {fileID: 1716885042210961735, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
       propertyPath: m_Name
       value: Chica_NPC (1)
@@ -7471,7 +7659,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.087113865
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7330988736229998512, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9076,6 +9265,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: nombreNPC
+      value: Sodado generico 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "No te olvides de equiparte un arma, si no, no podr\xE1s luchar."
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "\xA1Adelante! M\xE9tete en el men\xFA y busca tu equipaci\xF3n."
+      objectReference: {fileID: 0}
     - target: {fileID: 1610927340615805648, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.55999994
@@ -9116,6 +9325,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2148112819874793794, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2176194015505376863, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_Name
       value: Soldado_NPC (2)
@@ -9136,7 +9349,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.46077913
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4359813590797051415, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9380,6 +9594,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: nombreNPC
+      value: Enma Toma
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "No s\xE9 para qu\xE9 me ha tra\xEDdo a este antro. La \xFAltima vez
+        que uso Tinder."
+      objectReference: {fileID: 0}
     - target: {fileID: 1716885042210961735, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
       propertyPath: m_Name
       value: Chica_NPC (1)
@@ -9460,7 +9691,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.087113865
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7330988736229998512, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9761,6 +9993,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: NPC generico 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "\xA1No te preocupes! Si ya contigo se les acabaron las ideas de di\xE1logo,
+        no esperes m\xE1s.\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC (1)
@@ -9837,7 +10086,8 @@ PrefabInstance:
       propertyPath: hablado
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10814,6 +11064,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: Berto
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC (5)
@@ -10890,7 +11152,8 @@ PrefabInstance:
       propertyPath: hablado
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11705,6 +11968,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: nombreNPC
+      value: Miriam
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: " El hechicero de la monta\xF1a cada vez se est\xE1 convirtiendo en
+        un peligro."
+      objectReference: {fileID: 0}
     - target: {fileID: 1716885042210961735, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
       propertyPath: m_Name
       value: Chica_NPC (2)
@@ -11785,7 +12065,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.087113865
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7330988736229998512, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12595,6 +12876,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: nombreNPC
+      value: Lori
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "\xA1Puf! Cuando se entere este de aqu\xED de que lo que llevo es una
+        peluca y lo que hay en mis pantalones no es el m\xF3vil..."
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "\n\xA1Jaja! Eso s\xED que ser\xEDa una sorpresa."
+      objectReference: {fileID: 0}
     - target: {fileID: 1716885042210961735, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
       propertyPath: m_Name
       value: Chica_NPC (3)
@@ -12675,7 +12977,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.087113865
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7330988736229998512, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16817,6 +17120,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: Fausto
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "Hay un hechicero malvado subiendo el sendero de la monta\xF1a... \xFAltimamente
+        est\xE1 muy activo. No s\xE9 qu\xE9 ser\xE1 de nosotros."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: Espero que pronto alguien vaya y lo derrote.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[2]
+      value: Porque si es por mi ...
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC (4)
@@ -16893,7 +17221,8 @@ PrefabInstance:
       propertyPath: hablado
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17557,6 +17886,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: nombreNPC
+      value: Chispis
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: Guauf guaaauff guauf guau guaug
+      objectReference: {fileID: 0}
     - target: {fileID: 1447670606053566873, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.79
@@ -17601,7 +17946,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Perro_NPC (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8549227625553848845, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20554,6 +20900,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: nombreNPC
+      value: Carmela
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: En este lugar se habla de muchas cosas, tal vez alguna te sirva de algo.
+      objectReference: {fileID: 0}
     - target: {fileID: 1716885042210961735, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
       propertyPath: m_Name
       value: Chica_NPC (2)
@@ -20630,7 +20992,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.087113865
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7330988736229998512, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20643,6 +21006,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -6207829060900387561, guid: cf9b13f2804bd62418e2ede5069ee0c5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4758182291020373825, guid: cf9b13f2804bd62418e2ede5069ee0c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.428463
@@ -21402,6 +21769,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: nombreNPC
+      value: Chelsi
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "Piensa que es un disfraz, Imag\xEDnate, parece un disfraz, pero llevo
+        seis meses sin depilarme."
+      objectReference: {fileID: 0}
     - target: {fileID: 1447670606053566873, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -21462,7 +21846,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Perro_NPC (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8549227625553848845, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22695,6 +23080,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: Diego Gallu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "No s\xE9 qui\xE9nes son estos dos, pero me estoy poniendo las botas."
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC
@@ -22755,7 +23156,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22900,6 +23302,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: Jovanni
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: Esta noche mojo.
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC (7)
@@ -22976,7 +23394,8 @@ PrefabInstance:
       propertyPath: hablado
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23813,8 +24232,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002073162}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0016678885, y: -0.9971217, z: -0.02303896, w: 0.072213665}
-  m_LocalPosition: {x: -2.181, y: 0.285, z: -23.336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.8, y: 0.23, z: -21.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24788,6 +25207,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: Ricardo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "El de aqu\xED no es un perro en realidad, es un rarito vestido de perro.
+        No s\xE9 qu\xE9 les ha dado ahora."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "\xA1Malditos furros!"
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC (8)
@@ -24864,7 +25304,8 @@ PrefabInstance:
       propertyPath: hablado
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25220,6 +25661,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: nombreNPC
+      value: Mc Muffin
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "Esa de all\xED seguro que me est\xE1 haciendo ojitos."
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: Me tomo otra y me voy... si eso.
+      objectReference: {fileID: 0}
     - target: {fileID: 1610927340615805648, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1400003
@@ -25260,6 +25721,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2148112819874793794, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2176194015505376863, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_Name
       value: Soldado_NPC (1)
@@ -25280,7 +25745,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.46077913
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4359813590797051415, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25359,6 +25825,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: nombreNPC
+      value: Laica
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176136871170338667, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "\nEse de all\xED... \xBFqu\xE9 le pasa? \xBFPor qu\xE9 se pondr\xE1
+        a ladrar si no es un perro?"
+      objectReference: {fileID: 0}
     - target: {fileID: 1447670606053566873, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.81
@@ -25419,7 +25902,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Perro_NPC (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8549227625553848845, guid: c7d06725a0a28a44196ffecb976b1659, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25960,6 +26444,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200779788}
     m_Modifications:
+    - target: {fileID: -6207829060900387561, guid: cf9b13f2804bd62418e2ede5069ee0c5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6207829060900387561, guid: cf9b13f2804bd62418e2ede5069ee0c5, type: 3}
+      propertyPath: nombreNPC
+      value: Reinar
+      objectReference: {fileID: 0}
+    - target: {fileID: -6207829060900387561, guid: cf9b13f2804bd62418e2ede5069ee0c5, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6207829060900387561, guid: cf9b13f2804bd62418e2ede5069ee0c5, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: Confiando en mi magia, estoy seguro de poder vencer a ese Lich. Es todo
+        un reto, pero estoy preparado para enfrentarlo.
+      objectReference: {fileID: 0}
     - target: {fileID: 4758182291020373825, guid: cf9b13f2804bd62418e2ede5069ee0c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.548

@@ -83,7 +83,7 @@ public class ItemManager : MonoBehaviour
                     GetComponent<EquipoManager>().espadaCorta.SetActive(true);
                     panel.GetComponentsInChildren<TextMeshProUGUI>()[3].text = "Equipado";
                     espada = true;
-                    GetComponent<GameManager>().condicion = true;
+                    GetComponent<EventosManager>().espada = true;
                 }
                 else
                 {

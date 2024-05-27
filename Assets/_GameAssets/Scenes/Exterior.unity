@@ -16453,6 +16453,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7136356924102139407, guid: 4bef0dcc7a2f8d842ab8d9a47b24420a, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136356924102139407, guid: 4bef0dcc7a2f8d842ab8d9a47b24420a, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: --> Camino hacia el Bosque Espeso
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136356924102139407, guid: 4bef0dcc7a2f8d842ab8d9a47b24420a, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "\xA1Sigue el camino hacia el Hogar del \xC1rbol M\xE1gico!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136356924102139407, guid: 4bef0dcc7a2f8d842ab8d9a47b24420a, type: 3}
+      propertyPath: lineasDialogo.Array.data[2]
+      value: "\xA1Cuidado con los orcos y los mosquitos, unos pican en la cara y
+        otros pican en el culo!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17632,6 +17649,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684661065}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &686742362 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7507152179561321375, guid: ad3a636d37eb91149808ebf88276a163, type: 3}
+  m_PrefabInstance: {fileID: 730153429}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &690229049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18339,7 +18367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2408696639999952999, guid: ad3a636d37eb91149808ebf88276a163, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5204291691525303198, guid: ad3a636d37eb91149808ebf88276a163, type: 3}
       propertyPath: m_Pivot.x
@@ -21071,6 +21099,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3748976667609132821, guid: 20613689bafb4544cb770f64d1a03714, type: 3}
   m_PrefabInstance: {fileID: 830112747}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &837579319 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7523921961839387813, guid: ad3a636d37eb91149808ebf88276a163, type: 3}
+  m_PrefabInstance: {fileID: 730153429}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &837776157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4561261066736219567, guid: 20613689bafb4544cb770f64d1a03714, type: 3}
@@ -23084,6 +23123,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 210339812}
     m_Modifications:
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: nombreNPC
+      value: Manolito
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "Aqu\xED el que manda es el otro. Habla con \xE9l. A m\xED no me pagan
+        por pensar."
+      objectReference: {fileID: 0}
     - target: {fileID: 1148089792916131905, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00000028777868
@@ -23588,6 +23644,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2148112819874793794, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2176194015505376863, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_Name
       value: Soldado_NPC (1)
@@ -23600,7 +23660,8 @@ PrefabInstance:
       propertyPath: nombreNPC
       value: Paco tilla
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4359813590797051415, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -30366,7 +30427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1957061192937107421, guid: de51fd3014874194e823b9e17a697725, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.35
+      value: 3.82
       objectReference: {fileID: 0}
     - target: {fileID: 1957061192937107421, guid: de51fd3014874194e823b9e17a697725, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30374,7 +30435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1957061192937107421, guid: de51fd3014874194e823b9e17a697725, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.68
+      value: 25.8
       objectReference: {fileID: 0}
     - target: {fileID: 1957061192937107421, guid: de51fd3014874194e823b9e17a697725, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35152,6 +35213,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7136356924102139407, guid: 4bef0dcc7a2f8d842ab8d9a47b24420a, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136356924102139407, guid: 4bef0dcc7a2f8d842ab8d9a47b24420a, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: --> Camino del Bosque Espeso.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39462,6 +39531,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 210339812}
     m_Modifications:
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: nombreNPC
+      value: Dolores Delano
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "No est\xE1 nada mal aqu\xED, buenas vistas, aire puro \xA1y muchos
+        mosquitos!"
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "\xA1Eso s\xED que es el verdadero mal!"
+      objectReference: {fileID: 0}
     - target: {fileID: 116016709673273597, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -39714,7 +39804,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7330988736229998512, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -47974,6 +48065,36 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: Aitor Tilla
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "El puente est\xE1 destrozado, no podr\xE1s cruzar. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: Las ultimas tormetas lo destrozaron y no se pudo arreglar.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[2]
+      value: "Para llegar al otro puente que cruza el r\xEDo, tendr\xE1s que dar
+        un buen rodeo y atravesar el Bosque Espeso."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[3]
+      value: "Aunque \xFAltimamente han estado apareciendo orcos por esas zonas,
+        ten mucho cuidado, amigo."
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC
@@ -48179,7 +48300,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -59013,6 +59135,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1265723586}
     - target: {fileID: 2960039818174595229, guid: 3153518d04f899d458c26ea8441aa98a, type: 3}
+      propertyPath: textoNombre
+      value: 
+      objectReference: {fileID: 837579319}
+    - target: {fileID: 2960039818174595229, guid: 3153518d04f899d458c26ea8441aa98a, type: 3}
+      propertyPath: dialogoPanel
+      value: 
+      objectReference: {fileID: 180476097}
+    - target: {fileID: 2960039818174595229, guid: 3153518d04f899d458c26ea8441aa98a, type: 3}
+      propertyPath: textoDialogo
+      value: 
+      objectReference: {fileID: 686742362}
+    - target: {fileID: 2960039818174595229, guid: 3153518d04f899d458c26ea8441aa98a, type: 3}
       propertyPath: panelOpciones
       value: 
       objectReference: {fileID: 947632972}
@@ -59167,6 +59301,18 @@ PrefabInstance:
     - target: {fileID: 3182095067418296680, guid: 4bef0dcc7a2f8d842ab8d9a47b24420a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136356924102139407, guid: 4bef0dcc7a2f8d842ab8d9a47b24420a, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136356924102139407, guid: 4bef0dcc7a2f8d842ab8d9a47b24420a, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "Sendero de monta\xF1a hacia el malo, mal\xEDsimo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136356924102139407, guid: 4bef0dcc7a2f8d842ab8d9a47b24420a, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "\xA1Sin p\xE9rdida alguna!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -64073,6 +64219,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 210339812}
     m_Modifications:
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreNPC
+      value: Pascual
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "\xA1Vaya tajada que llevo! Como te descuides, me pimplo tambi\xE9n
+        estas botellas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "\xA1Es que soy como el sol: salgo y me pongo!"
+      objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
       value: Chico_NPC
@@ -64125,7 +64292,8 @@ PrefabInstance:
       propertyPath: nombreNPC
       value: Benito Camelas
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8110925270919719775, guid: a117e048b7165f148af9e0d537eca186, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -64138,6 +64306,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 210339812}
     m_Modifications:
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: nombreNPC
+      value: Elsa Pato
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "\xA1Me encantan los d\xEDas como hoy, cuando puedo disfrutar de la
+        belleza de las flores!"
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "\xBFHas visto el cofre de al lado? Es maravilloso. Te acercas y, \xA1puf!,
+        sale un objeto."
+      objectReference: {fileID: 0}
     - target: {fileID: 1716885042210961735, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
       propertyPath: m_Name
       value: Chica_NPC
@@ -64191,7 +64381,8 @@ PrefabInstance:
       propertyPath: nombreNPC
       value: Elsa Pato
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7330988736229998512, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -64974,9 +65165,24 @@ PrefabInstance:
       propertyPath: textoDialogo
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3658441670133589239, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: "\xA1Hola, forastero! Bienvenido a nuestro pueblo, Eldoria. Es un placer
+        tenerte aqu\xED."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3658441670133589239, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: pero debes saber que fuera de los muros es muy peligroso. No te dejaremos
+        salir sin estar armado.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3658441670133589239, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
+      propertyPath: lineasDialogo.Array.data[2]
+      value: "Dir\xEDgete a la taberna. All\xED seguro que encontrar\xE1s a algien
+        que podr\xE1 ayudarte. \xA1Buena suerte y mantente a salvo!"
+      objectReference: {fileID: 0}
     - target: {fileID: 5817209077531731373, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.207361
+      value: 20.675179
       objectReference: {fileID: 0}
     - target: {fileID: 5817209077531731373, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -64984,11 +65190,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5817209077531731373, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.147936
+      value: 18.6996
       objectReference: {fileID: 0}
     - target: {fileID: 5817209077531731373, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.04415941
+      value: 0.3211338
       objectReference: {fileID: 0}
     - target: {fileID: 5817209077531731373, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -64996,7 +65202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5817209077531731373, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9990245
+      value: -0.9470339
       objectReference: {fileID: 0}
     - target: {fileID: 5817209077531731373, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -65008,7 +65214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5817209077531731373, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -185.062
+      value: -142.537
       objectReference: {fileID: 0}
     - target: {fileID: 5817209077531731373, guid: 53ea492e014a0cb489e2f8aec27043d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -65031,6 +65237,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 210339812}
     m_Modifications:
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: evento
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: nombreNPC
+      value: Pepe Roni
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: nombreEvento
+      value: Porton
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo2.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: Fiesta privada, con esas pintas no te dejo pasar.
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "\xA1Oh, perdona! Muchos a\xF1os trabajando en una discoteca."
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo.Array.data[2]
+      value: "Pero chico, de todas formas, all\xED fuera est\xE1 muy peligroso para
+        salir sin armas. Ve y consigue una, y te dejar\xE9 pasar."
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo2.Array.data[0]
+      value: Disculpe solo puede pasar con zapatos.
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo2.Array.data[1]
+      value: ooPerdona otravez tu muchacho , la costumbre.
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: lineasDialogo2.Array.data[2]
+      value: veo que ya vas mejor asi me gusta
+      objectReference: {fileID: 0}
     - target: {fileID: 1148089792916131905, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00000097882
@@ -65497,7 +65752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1610927340615805648, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.23
+      value: 13.92
       objectReference: {fileID: 0}
     - target: {fileID: 1610927340615805648, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -65505,7 +65760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1610927340615805648, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.74
+      value: -8.33
       objectReference: {fileID: 0}
     - target: {fileID: 1610927340615805648, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -65535,6 +65790,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2148112819874793794, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2176194015505376863, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_Name
       value: Soldado_NPC
@@ -65547,7 +65806,8 @@ PrefabInstance:
       propertyPath: nombreNPC
       value: Pepe Roni
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4359813590797051415, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

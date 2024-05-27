@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UiManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class UiManager : MonoBehaviour
     public GameObject panelBtnOpciones;
     public GameObject panelNoUsarMas;
     public GameObject panelYaEstaEquipado;
+    public GameObject dialogoPanel;
+    public TextMeshProUGUI textoDialogo;
+    public TextMeshProUGUI textoNombre;
 
     [Header("Sonido UI")]
     public GameObject prefabSonido;
