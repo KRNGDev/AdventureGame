@@ -17,8 +17,11 @@ public class ControlPlayer : MonoBehaviour
     public float fuerzaSalto = 10.0f;
 
     [Header("GameObject Player")]
+
+    [SerializeField] private GameObject btnDialogo;
     public Joystick joystick;
     private Rigidbody rbPlayer;
+    private DialogoLargo currentNPC; // Modificado para manejar el NPC más cercano
 
     private void Awake()
     {
@@ -26,17 +29,19 @@ public class ControlPlayer : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else
+        {
+            Instance = this;
+        }
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         rbPlayer = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         camara = GameObject.Find("MainCamera").GetComponent<Camera>();
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!joystick)
@@ -47,17 +52,16 @@ public class ControlPlayer : MonoBehaviour
         {
             camara = GameObject.Find("MainCamera").GetComponent<Camera>();
         }
+
         if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.WindowsEditor)
         {
-            if (atacando == false)
+            if (!atacando)
             {
                 x = joystick.Horizontal;
                 y = joystick.Vertical;
 
                 animator.SetFloat("X", y);
                 animator.SetFloat("Y", x);
-                /* transform.Rotate(0, x * Time.deltaTime * velRotacion, 0);
-                 transform.Translate(0, 0, y * Time.deltaTime * velMovimiento);*/
 
                 var targetVector = new Vector3(x, 0, y);
                 var velocidad = velMovimiento * Time.deltaTime;
@@ -71,45 +75,23 @@ public class ControlPlayer : MonoBehaviour
                 var rotation = Quaternion.LookRotation(movementVector);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, velRotacion);
             }
-
-
         }
-        /* else
-         {
-             if (atacando == false && defendiendo == false)
-             {
-                 x = Input.GetAxis("Horizontal");
-                 y = Input.GetAxis("Vertical");
-
-                 transform.Rotate(0, x * Time.deltaTime * velRotacion, 0);
-                 transform.Translate(0, 0, y * Time.deltaTime * velMovimiento);
-
-                 animator.SetFloat("X", x);
-                 animator.SetFloat("Y", y);
-                 if (Input.GetButtonDown("Jump") && estaEnSuelo)
-                 {
-
-                     //rbPlayer.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
-                     animator.SetBool("Saltando", true);
-                     animator.SetBool("EstaEnSuelo", false);
-                     estaEnSuelo = false;
-
-
-                 }
-             }
-         }*/
-
     }
-    /*public void Salto()
+
+    public void SetCurrentNPC(DialogoLargo npc)
     {
-        if (estaEnSuelo)
+        currentNPC = npc;
+    }
+
+    public void TryStartDialogWithNPC()
+    {
+        if (currentNPC != null)
         {
-            animator.SetBool("Saltando", true);
-            animator.SetBool("EstaEnSuelo", false);
-            rbPlayer.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
-            estaEnSuelo = false;
+            print("parece que va");
+            currentNPC.IniciarDialogo();
         }
-    }*/
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("suelo"))
@@ -127,7 +109,12 @@ public class ControlPlayer : MonoBehaviour
             gm.SumarPuntos();
             print("moneda");
         }
+        if (other.gameObject.CompareTag("NPC"))
+        {
+            btnDialogo.SetActive(true);
+        }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("suelo"))
@@ -135,7 +122,12 @@ public class ControlPlayer : MonoBehaviour
             animator.SetBool("EstaEnSuelo", false);
             estaEnSuelo = false;
         }
+        if (other.gameObject.CompareTag("NPC"))
+        {
+            btnDialogo.SetActive(false);
+        }
     }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("suelo"))
@@ -148,18 +140,4 @@ public class ControlPlayer : MonoBehaviour
             GetComponent<Animator>().applyRootMotion = true;
         }
     }
-
-    /* public void OnCollisionEnter(Collision other)
-     {
-         if (!estaEnSuelo)
-         {
-             ContactPoint cp = other.GetContact(0);
-             Vector3 direccion = cp.normal;
-             GetComponentInChildren<Rigidbody>().AddForce(direccion * 150);
-             GetComponent<ControlPlayer>().enabled = false;
-             GetComponent<Animator>().applyRootMotion = false;
-         }
-
-     }*/
-
 }

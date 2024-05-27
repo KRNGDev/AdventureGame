@@ -68,14 +68,32 @@ namespace Enemigo
             }
 
         }
+        /* private void AsignarSiguienteTargetAleatorio()
+         {
+             print("patrullaje activo");
+             esperandoAsignacion = false;
+             nextTarget = Random.Range(0, targets.Count);
+             if (!siguiendo)
+             {
+                 navMeshAgent.destination = targets[nextTarget].position;
+             }
+         }*/
         private void AsignarSiguienteTargetAleatorio()
         {
             print("patrullaje activo");
             esperandoAsignacion = false;
             nextTarget = Random.Range(0, targets.Count);
+
             if (!siguiendo)
             {
-                navMeshAgent.destination = targets[nextTarget].position;
+                if (navMeshAgent.isOnNavMesh && navMeshAgent.isActiveAndEnabled)
+                {
+                    navMeshAgent.destination = targets[nextTarget].position;
+                }
+                else
+                {
+                    Debug.LogWarning("NavMeshAgent no está activo o no está en el NavMesh.");
+                }
             }
         }
         private void AsignarSiguienteTargetSecuencial()

@@ -33,6 +33,8 @@ public class VidaPlayer : MonoBehaviour
         {
             GameObject gm = GameObject.Find("GameManager");
             gm.GetComponent<UiManager>().controller.SetActive(false);
+            gm.GetComponent<UiManager>().btnMenu.SetActive(false);
+
 
             GetComponent<Animator>().SetBool("muerto", true);
             panelGameOver.SetActive(true);
@@ -58,7 +60,7 @@ public class VidaPlayer : MonoBehaviour
         {
 
 
-            int damage =2;
+            int damage = 2;
             QuitarVida(damage);
             GetComponent<Animator>().SetBool("Dado", true);
             dado = true;

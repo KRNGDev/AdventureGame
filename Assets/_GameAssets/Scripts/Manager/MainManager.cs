@@ -29,6 +29,10 @@ public class MainManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (PlayerPrefs.HasKey(MainManager.KEY_NAME))
+        {
+            RestoreName();
+        }
 
     }
     private void Start()

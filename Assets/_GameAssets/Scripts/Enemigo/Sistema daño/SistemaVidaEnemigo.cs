@@ -38,7 +38,7 @@ public class SistemaVidaEnemigo : MonoBehaviour
             muerto = true;
             if (GetComponent<EnemigoFinal>() == true)
             {
-                GameObject gameOver = Instantiate(GetComponent<EnemigoFinal>()?.panelFinal);
+                GameObject.Find("Final").SetActive(true);
                 Time.timeScale = 0;
 
             }
