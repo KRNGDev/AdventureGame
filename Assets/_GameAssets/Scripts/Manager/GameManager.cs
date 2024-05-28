@@ -157,4 +157,9 @@ public class GameManager : MonoBehaviour
         textoPunto = GameObject.Find("TextoPuntos").GetComponent<TextMeshProUGUI>();
         textoPunto.text = puntosActuales.ToString();
     }
+    public void BuscarCargarEscena(string nombre)
+    {
+        GameObject escene = GameObject.Find("EsceneManager");
+        escene.GetComponent<EsceneManager>().CargarEscena(nombre);
+    }
 }

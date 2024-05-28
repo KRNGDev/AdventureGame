@@ -59,10 +59,25 @@ public class MainManager : MonoBehaviour
 
     private void InitializeSlider()
     {
-        slider = GameObject.Find("SliderVolumen").GetComponent<Slider>();
-        slider.onValueChanged.AddListener(delegate { ModificarVolumen(); });
-        slider.maxValue = 1;
-        RestoreVolume();
+        GameObject sliderObject = GameObject.Find("SliderVolumen");
+        if (sliderObject != null)
+        {
+            slider = sliderObject.GetComponent<Slider>();
+            if (slider != null)
+            {
+                slider.onValueChanged.AddListener(delegate { ModificarVolumen(); });
+                slider.maxValue = 1;
+                RestoreVolume();
+            }
+            else
+            {
+                Debug.LogWarning("El objeto encontrado no tiene un componente Slider.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró el objeto SliderVolumen.");
+        }
     }
 
     private void InitializePanelOpciones()
@@ -71,8 +86,16 @@ public class MainManager : MonoBehaviour
         if (panelOpciones != null)
         {
             panelOpciones.SetActive(false);
+
             GameObject gm = GameObject.Find("GameManager");
-            gm.GetComponent<UiManager>().CerrarPanel("menu");
+            if (gm != null)
+            {
+                UiManager uiManager = gm.GetComponent<UiManager>();
+                if (uiManager != null)
+                {
+                    uiManager.CerrarPanel("menu");
+                }
+            }
         }
     }
 

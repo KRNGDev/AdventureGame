@@ -5,17 +5,18 @@ using UnityEngine;
 
 public class PosicionInicialEscena : MonoBehaviour
 {
-    private GameObject player;
-    private string posicion;
+    [SerializeField] private GameObject player;
+    [SerializeField] private string posicion;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+
         PosicionPlayer();
     }
 
     public void PosicionPlayer()
     {
+        player = GameObject.Find("Player");
         GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         posicion = gm.nombreUbicacion;
 

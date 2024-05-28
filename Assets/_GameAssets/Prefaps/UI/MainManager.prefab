@@ -195,6 +195,7 @@ MonoBehaviour:
   btnJugar: {fileID: 0}
   btnSalir: {fileID: 0}
   btnVolverNombre: {fileID: 0}
+  nombreEscena: 
 --- !u!1 &8869462533457037088
 GameObject:
   m_ObjectHideFlags: 0

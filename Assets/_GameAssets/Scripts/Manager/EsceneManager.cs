@@ -12,6 +12,7 @@ public class EsceneManager : MonoBehaviour
     private GameObject panelInicio;
     private GameObject panelAcciones;
     public GameObject btnVolverNombre;
+    public string nombreEscena;
 
     private void Awake()
     {
@@ -37,37 +38,43 @@ public class EsceneManager : MonoBehaviour
         switch (name)
         {
             case "exterior":
-                SceneManager.LoadScene("Exterior");
+                nombreEscena = "Exterior";
                 Time.timeScale = 1;
+                SceneManager.LoadScene("Cargando");
                 GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoBack;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
             case "casa1":
-                SceneManager.LoadScene("Casa1");
+                nombreEscena = "Casa1";
                 Time.timeScale = 1;
+                SceneManager.LoadScene("Cargando");
                 GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoBack;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
             case "intro":
-                SceneManager.LoadScene("intro");
+                nombreEscena = "intro";
+                SceneManager.LoadScene("Cargando");
                 GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoIntro;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
             case "taberna":
-                SceneManager.LoadScene("Taberna");
+                nombreEscena = "Taberna";
                 Time.timeScale = 1;
+                SceneManager.LoadScene("Cargando");
                 GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoIntro;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
             case "dungeon":
-                SceneManager.LoadScene("Dungeon");
+                nombreEscena = "Dungeon";
                 Time.timeScale = 1;
+                SceneManager.LoadScene("Cargando");
                 GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoIntro;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
             case "bosque":
-                SceneManager.LoadScene("Bosque");
+                nombreEscena = "Bosque";
                 Time.timeScale = 1;
+                SceneManager.LoadScene("Cargando");
                 GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoIntro;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;

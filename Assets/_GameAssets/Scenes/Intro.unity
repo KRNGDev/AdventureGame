@@ -3873,8 +3873,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4900772486590983042}
-        m_TargetAssemblyTypeName: EsceneManager, Assembly-CSharp
+      - m_Target: {fileID: 2002390240}
+        m_TargetAssemblyTypeName: Borrar, Assembly-CSharp
         m_MethodName: CargarEscena
         m_Mode: 5
         m_Arguments:
@@ -5171,8 +5171,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4900772486590983042}
-        m_TargetAssemblyTypeName: EsceneManager, Assembly-CSharp
+      - m_Target: {fileID: 2002390240}
+        m_TargetAssemblyTypeName: Borrar, Assembly-CSharp
         m_MethodName: CargarEscena
         m_Mode: 5
         m_Arguments:
@@ -5233,6 +5233,7 @@ GameObject:
   - component: {fileID: 2002390238}
   - component: {fileID: 2002390237}
   - component: {fileID: 2002390236}
+  - component: {fileID: 2002390240}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5324,6 +5325,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2002390240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002390235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1eb98d8c51cc2d4e89974c8128a14bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2055584821
 GameObject:
   m_ObjectHideFlags: 0
@@ -5488,6 +5501,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4305914830289097252}
+  - {fileID: 4123130350492909024}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3344692571628205792
@@ -5532,11 +5546,11 @@ Transform:
   m_GameObject: {fileID: 4571348354509172834}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 680.0715, y: 878.0442, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1574577748676709305}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4305914830289097252
 Transform:
@@ -5585,6 +5599,7 @@ MonoBehaviour:
   btnJugar: {fileID: 0}
   btnSalir: {fileID: 0}
   btnVolverNombre: {fileID: 1936882990}
+  nombreEscena: 
 --- !u!82 &5349615060126737068
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5724,5 +5739,4 @@ SceneRoots:
   - {fileID: 709995001}
   - {fileID: 2002390239}
   - {fileID: 644255896}
-  - {fileID: 4123130350492909024}
   - {fileID: 1574577748676709305}

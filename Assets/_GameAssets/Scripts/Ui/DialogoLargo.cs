@@ -108,7 +108,7 @@ public class DialogoLargo : MonoBehaviour
         else
         {
             TerminarDialogo();
-            if (eventoHecho)
+            if (!eventoHecho)
             {
                 EjecutarEvento();
             }
