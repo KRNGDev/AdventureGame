@@ -4668,6 +4668,10 @@ PrefabInstance:
       value: espada
       objectReference: {fileID: 0}
     - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: noTieneEvento
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261713895443614490, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
       propertyPath: lineasDialogo.Array.size
       value: 3
       objectReference: {fileID: 0}

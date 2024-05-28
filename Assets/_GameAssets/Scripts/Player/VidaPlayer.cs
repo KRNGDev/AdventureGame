@@ -1,20 +1,16 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.UI;
 
 public class VidaPlayer : MonoBehaviour
 {
     [Header("Datos Personaje")]
     public bool inmortal = false;
+    public string tagEnemigo;
 
-    public String tagEnemigo;
-
-
+    [Header("Panel Game Over")]
     public GameObject panelGameOver;
     private bool dado = false;
+
     [Header("Fx Personaje")]
     public GameObject humo;
 
@@ -22,87 +18,72 @@ public class VidaPlayer : MonoBehaviour
     {
         panelGameOver = GameObject.Find("PanelGameOver");
         panelGameOver.SetActive(false);
-
     }
 
-    void Update()
+    private void Update()
     {
+        VerificarVida();
+    }
 
-
+    private void VerificarVida()
+    {
         if (GetComponent<Stats>().vidaActual <= 0)
         {
             GameObject gm = GameObject.Find("GameManager");
-            gm.GetComponent<UiManager>().controller.SetActive(false);
-            gm.GetComponent<UiManager>().btnMenu.SetActive(false);
+            UiManager uiManager = gm.GetComponent<UiManager>();
 
+            uiManager.controller.SetActive(false);
+            uiManager.btnMenu.SetActive(false);
 
             GetComponent<Animator>().SetBool("muerto", true);
             panelGameOver.SetActive(true);
-
         }
     }
+
     public void QuitarVida(int hit)
     {
         if (!inmortal)
         {
             GetComponent<Stats>().vidaActual -= hit;
         }
-
-
-
-
     }
-    void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter(Collider other)
     {
-
-
-        if (other.gameObject.CompareTag(tagEnemigo) && !dado)
+        if (!dado && (other.gameObject.CompareTag(tagEnemigo) || other.gameObject.CompareTag("LanzaLlamas")))
         {
-
-
-            int damage = 2;
+            int damage = other.gameObject.CompareTag(tagEnemigo) ? 2 : 5;
             QuitarVida(damage);
+
             GetComponent<Animator>().SetBool("Dado", true);
             dado = true;
             GetComponent<ControlPlayer>().enabled = false;
-
         }
-        if (other.gameObject.CompareTag("LanzaLlamas") && !dado)
-        {
-
-
-            int damage = 5;
-            QuitarVida(damage);
-            GetComponent<Animator>().SetBool("Dado", true);
-            dado = true;
-            GetComponent<ControlPlayer>().enabled = false;
-
-        }
-
     }
-    void OnTriggerExit(Collider other)
+
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag(tagEnemigo))
         {
-            dado = false;
-            GetComponent<Animator>().SetBool("Dado", false);
-
+            ResetDado();
         }
     }
+
     public void QuitarGolpe()
+    {
+        ResetDado();
+        GetComponent<ControlPlayer>().enabled = true;
+    }
+
+    private void ResetDado()
     {
         dado = false;
         GetComponent<Animator>().SetBool("Dado", false);
-        GetComponent<ControlPlayer>().enabled = true;
     }
+
     public void GameOver()
     {
-
-
         Instantiate(humo, transform.position, transform.rotation);
-        Destroy(transform.gameObject);
-
-        //Time.timeScale = 0;
+        Destroy(gameObject);
     }
-
 }

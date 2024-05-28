@@ -5745,79 +5745,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236533186}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &238044418
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1025023402}
-    m_Modifications:
-    - target: {fileID: 1731300727066166900, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 2029167806096378543, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2029167806096378543, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -46.031403
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.020338058
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14.304655
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6233877088212519162, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_Name
-      value: Orco (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6233877088212519162, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
 --- !u!1001 &240281101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25823,7 +25750,6 @@ Transform:
   - {fileID: 213774503}
   - {fileID: 1122782323}
   - {fileID: 191064483}
-  - {fileID: 2142242991}
   - {fileID: 868971044}
   - {fileID: 570736808}
   - {fileID: 459695764}
@@ -53715,11 +53641,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cafcfd6e6593046488752a3856d2398c, type: 3}
---- !u!4 &2142242991 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4833051288616531521, guid: afee41acf752a9544b4ce0bddfbb3c5c, type: 3}
-  m_PrefabInstance: {fileID: 238044418}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2145519281 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3385958044552582957, guid: 2b66385ecc3e6b34e82ee78058e90aea, type: 3}
@@ -64381,6 +64302,18 @@ PrefabInstance:
       propertyPath: nombreNPC
       value: Elsa Pato
       objectReference: {fileID: 0}
+    - target: {fileID: 7410716085662579699, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410716085662579699, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410716085662579699, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7330988736229998512, guid: 7891f865b10bf6d44946da927e11fea9, type: 3}
     m_RemovedGameObjects: []
@@ -65254,6 +65187,10 @@ PrefabInstance:
       value: Porton
       objectReference: {fileID: 0}
     - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
+      propertyPath: noTieneEvento
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: lineasDialogo.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -65271,20 +65208,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: lineasDialogo.Array.data[2]
-      value: "Pero chico, de todas formas, all\xED fuera est\xE1 muy peligroso para
-        salir sin armas. Ve y consigue una, y te dejar\xE9 pasar."
+      value: "Pero chico, de todas formas, all\xED fuera est\xE1 muy mal la cosa
+        para salir sin armas. Ve y consigue una, y te dejar\xE9 pasar."
       objectReference: {fileID: 0}
     - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: lineasDialogo2.Array.data[0]
-      value: Disculpe solo puede pasar con zapatos.
+      value: Disculpe pero solo puede pasar con zapatos.
       objectReference: {fileID: 0}
     - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: lineasDialogo2.Array.data[1]
-      value: ooPerdona otravez tu muchacho , la costumbre.
+      value: Perdona otravez tu muchacho , la costumbre.
       objectReference: {fileID: 0}
     - target: {fileID: -1013138247653851684, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: lineasDialogo2.Array.data[2]
-      value: veo que ya vas mejor asi me gusta
+      value: veo que ya vas mejor asi me gusta, ya puedes pasar. Disfruta de tu viaje.
       objectReference: {fileID: 0}
     - target: {fileID: 1148089792916131905, guid: dec545749dcf4c14e801bf649070d56e, type: 3}
       propertyPath: m_LocalPosition.x

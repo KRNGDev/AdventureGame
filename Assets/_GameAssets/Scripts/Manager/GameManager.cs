@@ -1,20 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
-using System;
-using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject playerPrefab;
     public string nombreUbicacion;
     public List<Item> inventarioItem = new List<Item>();
-
     public List<Item> inventarioEquipacion = new List<Item>();
-
     public Transform panelContenItem;
     public Transform panelContenEquipo;
     public GameObject prefabItemPanel;
@@ -23,161 +20,117 @@ public class GameManager : MonoBehaviour
     public bool espada = false;
     private GameObject player;
 
-
-
     [Header("Recuento de puntos")]
     public int puntosActuales = 0;
     public int puntosMax;
     public int puntos;
     private TextMeshProUGUI textoPunto;
 
-
     void Start()
     {
         player = GameObject.Find("Player");
         nombre = GameObject.Find("NombreTexto").GetComponent<TextMeshProUGUI>();
         nombre.text = PlayerPrefs.GetString("Nombre");
-
     }
+
     void Update()
     {
-
-
+        // Mantener este método vacío o removerlo si no se usa.
     }
-
 
     public void CargarObjetos()
     {
-        print("busca item panel");
-        List<Item> copiaInventarioItem = new List<Item>(inventarioItem);
-        foreach (Item item in copiaInventarioItem)
-        {
-            print("busca item panel");
-            Debug.Log(item);
-            // Busca si ya hay un panel creado para el item
-            GameObject panel = BuscarPanelExistente(item.nombre, panelContenItem);
-
-            // Si no hay un panel existente, crea uno nuevo
-            if (panel == null)
-            {
-                print("crea panel");
-                CrearPanelItem(item);
-                inventarioItem.Remove(item);
-
-            }
-            else
-            {
-                panel.GetComponent<Item>().cantidadItem += item.cantidadItem;
-                int cadidadActual = panel.GetComponent<Item>().cantidadItem;
-                panel.GetComponentsInChildren<TextMeshProUGUI>()[1].text = "" + cadidadActual;
-                inventarioItem.Remove(item);
-            }
-
-        }
-        List<Item> copiaInventarioEquipacion = new List<Item>(inventarioEquipacion);
-        foreach (Item equipo in copiaInventarioEquipacion)
-        {
-            print("busca item panel");
-            GameObject panel = BuscarPanelExistente(equipo.nombre, panelContenEquipo);
-
-            // Si no hay un panel existente, crea uno nuevo
-            if (panel == null)
-            {
-                print("crea panel");
-
-                CrearPanelEquipo(equipo);
-                inventarioEquipacion.Remove(equipo);
-
-            }
-            else
-            {
-
-                panel.GetComponent<Item>().cantidadItem += equipo.cantidadItem;
-                int cadidadActual = panel.GetComponent<Item>().cantidadItem;
-                panel.GetComponentsInChildren<TextMeshProUGUI>()[1].text = "" + cadidadActual;
-                inventarioEquipacion.Remove(equipo);
-            }
-
-        }
+        ProcesarInventario(inventarioItem, panelContenItem, CrearPanelItem);
+        ProcesarInventario(inventarioEquipacion, panelContenEquipo, CrearPanelEquipo);
         MostrarPrimerObjeto();
     }
-    public void CrearPanelItem(Item item)
+
+    private void ProcesarInventario(List<Item> inventario, Transform panelContenedor, Action<Item> crearPanel)
     {
-
-        GameObject panelItem = Instantiate(prefabItemPanel, panelContenItem);
-
-        panelItem.GetComponent<Item>().nombre = item.nombre;
-        panelItem.GetComponent<Item>().descripcion = item.descripcion;
-        panelItem.GetComponent<Item>().objeto = item.objeto;
-        panelItem.GetComponent<Item>().equipo = item.equipo;
-        panelItem.GetComponent<Item>().cantidadItem = item.cantidadItem;
-        panelItem.GetComponent<Item>().imagen = item.imagen;
-        // Obtiene los componentes de texto e imagen del panel
-        panelItem.GetComponentsInChildren<Image>()[1].sprite = panelItem.GetComponent<Item>().imagen;
-        panelItem.GetComponentInChildren<TextMeshProUGUI>().text = panelItem.GetComponent<Item>().nombre;
-        panelItem.GetComponentsInChildren<TextMeshProUGUI>()[1].text = "" + panelItem.GetComponent<Item>().cantidadItem;
-        panelItem.name = item.nombre;
+        List<Item> copiaInventario = new List<Item>(inventario);
+        foreach (Item item in copiaInventario)
+        {
+            GameObject panel = BuscarPanelExistente(item.nombre, panelContenedor);
+            if (panel == null)
+            {
+                crearPanel(item);
+            }
+            else
+            {
+                Item panelItem = panel.GetComponent<Item>();
+                panelItem.cantidadItem += item.cantidadItem;
+                panel.GetComponentsInChildren<TextMeshProUGUI>()[1].text = panelItem.cantidadItem.ToString();
+            }
+            inventario.Remove(item);
+        }
     }
-    void CrearPanelEquipo(Item item)
+
+    private void CrearPanelItem(Item item)
+    {
+        GameObject panelItem = Instantiate(prefabItemPanel, panelContenItem);
+        ConfigurarPanelItem(panelItem, item);
+    }
+
+    private void CrearPanelEquipo(Item item)
     {
         GameObject panelItem = Instantiate(prefabItemPanel, panelContenEquipo);
-        // Obtiene los componentes de texto e imagen del panel
-        panelItem.GetComponent<Item>().nombre = item.nombre;
-        panelItem.GetComponent<Item>().descripcion = item.descripcion;
-        panelItem.GetComponent<Item>().objeto = item.objeto;
-        panelItem.GetComponent<Item>().equipo = item.equipo;
-        panelItem.GetComponent<Item>().cantidadItem = item.cantidadItem;
-        panelItem.GetComponent<Item>().imagen = item.imagen;
-        // Obtiene los componentes de texto e imagen del panel
-        panelItem.GetComponentsInChildren<Image>()[1].sprite = panelItem.GetComponent<Item>().imagen;
-        panelItem.GetComponentInChildren<TextMeshProUGUI>().text = panelItem.GetComponent<Item>().nombre;
-        panelItem.GetComponentsInChildren<TextMeshProUGUI>()[1].text = "" + panelItem.GetComponent<Item>().cantidadItem;
+        ConfigurarPanelItem(panelItem, item);
+    }
+
+    private void ConfigurarPanelItem(GameObject panelItem, Item item)
+    {
+        Item panelItemComponent = panelItem.GetComponent<Item>();
+        panelItemComponent.nombre = item.nombre;
+        panelItemComponent.descripcion = item.descripcion;
+        panelItemComponent.objeto = item.objeto;
+        panelItemComponent.equipo = item.equipo;
+        panelItemComponent.cantidadItem = item.cantidadItem;
+        panelItemComponent.imagen = item.imagen;
+
+        panelItem.GetComponentsInChildren<Image>()[1].sprite = item.imagen;
+        panelItem.GetComponentInChildren<TextMeshProUGUI>().text = item.nombre;
+        panelItem.GetComponentsInChildren<TextMeshProUGUI>()[1].text = item.cantidadItem.ToString();
         panelItem.name = item.nombre;
-
-
     }
 
     public void MostrarDescripcion()
     {
-
         Item panelItem = EventSystem.current.currentSelectedGameObject.GetComponent<Item>();
         GameObject panel = GameObject.Find("GameManager").GetComponent<UiManager>().panelDescripcion;
+        ConfigurarPanelDescripcion(panel, panelItem);
+    }
+
+    private void ConfigurarPanelDescripcion(GameObject panel, Item panelItem)
+    {
         panel.GetComponentsInChildren<TextMeshProUGUI>()[0].text = panelItem.nombre;
         panel.GetComponentsInChildren<TextMeshProUGUI>()[2].text = panelItem.descripcion;
         panel.GetComponentsInChildren<Image>()[3].sprite = panelItem.imagen;
-
-
     }
+
     public void MostrarPrimerObjeto()
     {
-        if (panelContenItem.transform.childCount <= 0) return;
-        Transform primerObjeto = panelContenItem.transform.GetChild(0);
-        Item panelItem = primerObjeto.GetComponent<Item>();
-        GameObject panel = GameObject.Find("GameManager").GetComponent<UiManager>().panelDescripcion;
-        panel.GetComponentsInChildren<TextMeshProUGUI>()[0].text = panelItem.nombre;
-        panel.GetComponentsInChildren<TextMeshProUGUI>()[2].text = panelItem.descripcion;
-        panel.GetComponentsInChildren<Image>()[3].sprite = panelItem.imagen;
-
-
+        if (panelContenItem.childCount > 0)
+        {
+            Transform primerObjeto = panelContenItem.GetChild(0);
+            Item panelItem = primerObjeto.GetComponent<Item>();
+            GameObject panel = GameObject.Find("GameManager").GetComponent<UiManager>().panelDescripcion;
+            ConfigurarPanelDescripcion(panel, panelItem);
+        }
     }
+
     public void MostrarPrimerEquipo()
     {
-        if (panelContenEquipo.transform.childCount <= 0) return;
-        Transform primerObjeto = panelContenEquipo.transform.GetChild(0);
-        Item panelItem = primerObjeto.GetComponent<Item>();
-        GameObject panel = GameObject.Find("GameManager").GetComponent<UiManager>().panelDescripcion;
-        panel.GetComponentsInChildren<TextMeshProUGUI>()[0].text = panelItem.nombre;
-        panel.GetComponentsInChildren<TextMeshProUGUI>()[2].text = panelItem.descripcion;
-        panel.GetComponentsInChildren<Image>()[3].sprite = panelItem.imagen;
-
-
-
+        if (panelContenEquipo.childCount > 0)
+        {
+            Transform primerObjeto = panelContenEquipo.GetChild(0);
+            Item panelItem = primerObjeto.GetComponent<Item>();
+            GameObject panel = GameObject.Find("GameManager").GetComponent<UiManager>().panelDescripcion;
+            ConfigurarPanelDescripcion(panel, panelItem);
+        }
     }
 
-    public GameObject BuscarPanelExistente(String item, Transform panelContenedor)
+    public GameObject BuscarPanelExistente(string item, Transform panelContenedor)
     {
-
-        // Itera sobre los paneles hijos del contenedor y busca un panel con el mismo nombre que el item
         foreach (Transform child in panelContenedor)
         {
             if (child.name == item)
@@ -185,24 +138,23 @@ public class GameManager : MonoBehaviour
                 return child.gameObject;
             }
         }
-        return null; // Retorna null si no se encuentra un panel existente para el item
+        return null;
     }
 
     public void SumarPuntos()
     {
-        
-        textoPunto = GameObject.Find("TextoPuntos").GetComponent<TextMeshProUGUI>();
-        puntosActuales++;
-        textoPunto.text = "" + puntosActuales;
-
+        ActualizarPuntos(1);
     }
-     public void QuitarPuntos()
+
+    public void QuitarPuntos()
     {
-        print("Quita");
-        textoPunto = GameObject.Find("TextoPuntos").GetComponent<TextMeshProUGUI>();       
-        puntosActuales--;
-        textoPunto.text = "" + puntosActuales;
-
+        ActualizarPuntos(-1);
     }
 
+    private void ActualizarPuntos(int cantidad)
+    {
+        puntosActuales += cantidad;
+        textoPunto = GameObject.Find("TextoPuntos").GetComponent<TextMeshProUGUI>();
+        textoPunto.text = puntosActuales.ToString();
+    }
 }

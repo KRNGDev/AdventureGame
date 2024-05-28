@@ -24657,7 +24657,7 @@ Transform:
   m_GameObject: {fileID: 1236495270445920708}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.638184, y: 0.16023827, z: -27.069668}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.59999996, y: 0.59999996, z: 0.59999996}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -39489,7 +39489,7 @@ Transform:
   m_GameObject: {fileID: 2941890787356793427}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.9990245, z: -0, w: -0.04415941}
-  m_LocalPosition: {x: -21.88, y: 9.837929, z: -8.49}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -39599,15 +39599,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   marcaDialogo: {fileID: 1236495270445920708}
-  dialogoPanel: {fileID: 0}
-  textoDialogo: {fileID: 0}
-  textoNombre: {fileID: 0}
+  objetoSpaw: {fileID: 0}
+  puntoSpawn: {fileID: 0}
+  espada: 0
+  puerta: 0
+  eventoHecho: 0
+  nombreEvento: 
   tiempoLetras: 0.05
   playerEnRango: 0
   dialogoEmpezado: 0
   lineaIndex: 0
   nombreNPC: 
   lineasDialogo: []
+  lineasDialogo2: []
 --- !u!1 &2959121391639133590
 GameObject:
   m_ObjectHideFlags: 0

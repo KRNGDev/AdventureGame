@@ -11,6 +11,7 @@ public class DialogoLargo : MonoBehaviour
     private TextMeshProUGUI textoNombre;
     public GameObject objetoSpaw;
     public Transform puntoSpawn;
+    public bool noTieneEvento = true;
     public bool espada;
     public bool puerta;
     public bool eventoHecho;
@@ -18,12 +19,13 @@ public class DialogoLargo : MonoBehaviour
     public float tiempoLetras;
     public bool playerEnRango;
     public bool dialogoEmpezado;
-
     public int lineaIndex;
+
     [Header("Texto para NPC")]
     public string nombreNPC;
     [SerializeField, TextArea(4, 6)] private string[] lineasDialogo;
     [SerializeField, TextArea(4, 6)] private string[] lineasDialogo2;
+
     private GameObject gm;
 
     void Start()
@@ -31,9 +33,10 @@ public class DialogoLargo : MonoBehaviour
         gm = GameObject.Find("GameManager");
         if (gm != null)
         {
-            dialogoPanel = gm.GetComponent<UiManager>().dialogoPanel;
-            textoNombre = gm.GetComponent<UiManager>().textoNombre.GetComponent<TextMeshProUGUI>();
-            textoDialogo = gm.GetComponent<UiManager>().textoDialogo.GetComponent<TextMeshProUGUI>();
+            var uiManager = gm.GetComponent<UiManager>();
+            dialogoPanel = uiManager.dialogoPanel;
+            textoNombre = uiManager.textoNombre.GetComponent<TextMeshProUGUI>();
+            textoDialogo = uiManager.textoDialogo.GetComponent<TextMeshProUGUI>();
         }
         else
         {
@@ -45,121 +48,122 @@ public class DialogoLargo : MonoBehaviour
     {
         if (playerEnRango)
         {
-            if (!eventoHecho)
+            if (!dialogoEmpezado)
             {
-                if (!dialogoEmpezado)
+
+                dialogoEmpezado = true;
+                dialogoPanel.SetActive(true);
+                textoNombre.text = nombreNPC;
+                marcaDialogo.SetActive(false);
+                lineaIndex = 0;
+                ComprobarEvento();
+                if (noTieneEvento || !eventoHecho)
                 {
-                    dialogoEmpezado = true;
-                    dialogoPanel.SetActive(true);
-                    textoNombre.text = nombreNPC;
-                    marcaDialogo.SetActive(false);
-                    lineaIndex = 0;
-                    StartCoroutine(MostrarLineas());
-                }
-                else if (textoDialogo.text == lineasDialogo[lineaIndex])
-                {
-                    SiguienteLinea();
+                    StartCoroutine(MostrarLineas(lineasDialogo));
                 }
                 else
                 {
-                    StopAllCoroutines();
-                    textoDialogo.text = lineasDialogo[lineaIndex];
+                    StartCoroutine(MostrarLineas(lineasDialogo2));
                 }
             }
             else
             {
-                if (!dialogoEmpezado)
-                {
-                    dialogoEmpezado = true;
-                    dialogoPanel.SetActive(true);
-                    textoNombre.text = nombreNPC;
-                    marcaDialogo.SetActive(false);
-                    lineaIndex = 0;
-                    StartCoroutine(MostrarLineas2());
-                }
-                else if (textoDialogo.text == lineasDialogo2[lineaIndex])
-                {
-                    SiguienteLinea();
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    textoDialogo.text = lineasDialogo2[lineaIndex];
-                }
+                ContinuarDialogo();
             }
         }
     }
 
-    private void SiguienteLinea()
+    private void ContinuarDialogo()
     {
-        espada = gm.GetComponent<EventosManager>().espada;
-        lineaIndex++;
-        if (lineaIndex < lineasDialogo.Length)
+        if (noTieneEvento || !eventoHecho)
         {
-            if (espada)
-            {
-                eventoHecho = true;
-            }
-            if (!eventoHecho)
-            {
-                StartCoroutine(MostrarLineas());
-            }
-            else
-            {
-                StartCoroutine(MostrarLineas2());
-            }
+            ProcesarDialogo(lineasDialogo);
         }
         else
         {
-            dialogoEmpezado = false;
-            dialogoPanel.SetActive(false);
-            marcaDialogo.SetActive(true);
-            if (espada)
+            ProcesarDialogo(lineasDialogo2);
+        }
+    }
+
+    private void ProcesarDialogo(string[] lineas)
+    {
+        if (textoDialogo.text == lineas[lineaIndex])
+        {
+            SiguienteLinea(lineas);
+        }
+        else
+        {
+            StopAllCoroutines();
+            textoDialogo.text = lineas[lineaIndex];
+        }
+    }
+
+    private void SiguienteLinea(string[] lineas)
+    {
+        lineaIndex++;
+        if (lineaIndex < lineas.Length)
+        {
+            StartCoroutine(MostrarTexto(lineas));
+        }
+        else
+        {
+            TerminarDialogo();
+            if (eventoHecho)
             {
-                gm = GameObject.Find("GameManager");
-                gm.GetComponent<EventosManager>().Evento(nombreEvento);
-            }
-            if (nombreEvento == "espada" && gm.GetComponent<GameManager>().puntosActuales > 0)
-            {
-                if (!eventoHecho)
-                {
-                    gm.GetComponent<GameManager>().QuitarPuntos();
-                    SpawnObjeto();
-                    eventoHecho = true;
-                    IniciarDialogo();
-                }
-                return;
+                EjecutarEvento();
             }
         }
     }
 
-    private IEnumerator MostrarLineas()
+    private void TerminarDialogo()
+    {
+
+        dialogoEmpezado = false;
+        dialogoPanel.SetActive(false);
+        marcaDialogo.SetActive(true);
+
+    }
+    public void ComprobarEvento()
+    {
+        espada = gm.GetComponent<EventosManager>().espada;
+        if (espada)
+        {
+            eventoHecho = true;
+        }
+
+
+    }
+    private void EjecutarEvento()
+    {
+        if (espada)
+        {
+            gm.GetComponent<EventosManager>().Evento(nombreEvento);
+            eventoHecho = true;
+        }
+        if (nombreEvento == "espada" && gm.GetComponent<GameManager>().puntosActuales > 0)
+        {
+            if (!eventoHecho)
+            {
+                gm.GetComponent<GameManager>().QuitarPuntos();
+                SpawnObjeto();
+                eventoHecho = true;
+                IniciarDialogo();
+            }
+        }
+    }
+
+    private IEnumerator MostrarLineas(string[] lineas)
+    {
+        yield return MostrarTexto(lineas);
+    }
+
+    private IEnumerator MostrarTexto(string[] lineas)
     {
         textoDialogo.text = string.Empty;
-        foreach (char ch in lineasDialogo[lineaIndex])
+        foreach (char ch in lineas[lineaIndex])
         {
             textoDialogo.text += ch;
             yield return new WaitForSeconds(tiempoLetras);
-        }
-    }
-
-    private IEnumerator MostrarLineas2()
-    {
-        textoDialogo.text = string.Empty;
-        if (lineaIndex < lineasDialogo2.Length)
-        {
-            foreach (char ch in lineasDialogo2[lineaIndex])
-            {
-                textoDialogo.text += ch;
-                yield return new WaitForSeconds(tiempoLetras);
-            }
-        }
-        else
-        {
-            dialogoEmpezado = false;
-            dialogoPanel.SetActive(false);
-            marcaDialogo.SetActive(true);
-            Debug.LogWarning("El índice de línea está fuera del rango para lineasDialogo2.");
         }
     }
 
@@ -186,6 +190,6 @@ public class DialogoLargo : MonoBehaviour
     public void SpawnObjeto()
     {
         GameObject.Find("GameManager").GetComponent<GameManager>().condicion = true;
-        Instantiate(objetoSpaw, puntoSpawn);
+        Instantiate(objetoSpaw, puntoSpawn.position, puntoSpawn.rotation);
     }
 }
