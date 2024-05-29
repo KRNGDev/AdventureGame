@@ -51,6 +51,13 @@ public class EsceneManager : MonoBehaviour
                 GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoBack;
                 GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
                 break;
+            case "casa2":
+                nombreEscena = "Casa2";
+                Time.timeScale = 1;
+                SceneManager.LoadScene("Cargando");
+                GameObject.Find("MainManager").GetComponent<AudioSource>().clip = GameObject.Find("SoundEscene").GetComponentInChildren<SoundEscene>()?.sonidoBack;
+                GameObject.Find("MainManager").GetComponent<AudioSource>().Play();
+                break;
             case "intro":
                 nombreEscena = "intro";
                 SceneManager.LoadScene("Cargando");

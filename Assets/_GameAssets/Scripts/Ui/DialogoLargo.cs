@@ -112,6 +112,11 @@ public class DialogoLargo : MonoBehaviour
             {
                 EjecutarEvento();
             }
+            if (espada)
+            {
+                gm.GetComponent<EventosManager>().Evento(nombreEvento);
+                eventoHecho = true;
+            }
         }
     }
 
@@ -126,6 +131,9 @@ public class DialogoLargo : MonoBehaviour
     public void ComprobarEvento()
     {
         espada = gm.GetComponent<EventosManager>().espada;
+        gm.GetComponent<EventosManager>().porton = GameObject.Find("Cylinder.003");
+
+
         if (espada)
         {
             eventoHecho = true;
@@ -135,16 +143,22 @@ public class DialogoLargo : MonoBehaviour
     }
     private void EjecutarEvento()
     {
-        if (espada)
-        {
-            gm.GetComponent<EventosManager>().Evento(nombreEvento);
-            eventoHecho = true;
-        }
+
         if (nombreEvento == "espada" && gm.GetComponent<GameManager>().puntosActuales > 0)
         {
             if (!eventoHecho)
             {
                 gm.GetComponent<GameManager>().QuitarPuntos();
+                SpawnObjeto();
+                eventoHecho = true;
+                IniciarDialogo();
+            }
+        }
+        if (nombreEvento == "moneda")
+        {
+            if (!eventoHecho)
+            {
+
                 SpawnObjeto();
                 eventoHecho = true;
                 IniciarDialogo();

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -149, y: 31.273}
+  m_AnchoredPosition: {x: -149, y: 1}
   m_SizeDelta: {x: 187.79443, y: 164.3263}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &184388766
@@ -232,8 +232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000096858, y: -101.61682}
-  m_SizeDelta: {x: 232.8759, y: 34.3717}
+  m_AnchoredPosition: {x: 0.0000096858, y: -75.1}
+  m_SizeDelta: {x: 232.8759, y: 45.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &240291248
 MonoBehaviour:
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.92156863}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1442,7 +1442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223.51491, y: -105.56227}
+  m_AnchoredPosition: {x: 225.2, y: -98.107}
   m_SizeDelta: {x: 144.9703, y: 34.6245}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &656707234
@@ -1710,9 +1710,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 176377016}
   - {fileID: 448878863}
   - {fileID: 1722415100}
+  - {fileID: 176377016}
   m_Father: {fileID: 2002390239}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2418,8 +2418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.072296, y: -30.124496}
-  m_SizeDelta: {x: -162.3126, y: -122.3555}
+  m_AnchoredPosition: {x: 5.072296, y: -51.000008}
+  m_SizeDelta: {x: -162.3126, y: -164.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1722415101
 MonoBehaviour:
@@ -2545,8 +2545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.1445, y: 12.6808}
-  m_SizeDelta: {x: 538.1509, y: 186.9511}
+  m_AnchoredPosition: {x: -3.8905, y: 3.5993}
+  m_SizeDelta: {x: 566.2209, y: 168.7881}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1833478481
 MonoBehaviour:
@@ -2571,9 +2571,9 @@ MonoBehaviour:
   m_text: "En las sombr\xEDas laderas de una monta\xF1a envuelta en misterio, un
     pueblo se aferra a la esperanza mientras la oscuridad se cierne sobre \xE9l.
     Un intr\xE9pido aventurero llega a sus puertas, llamado por el rumor de un mal
-    ancestral que acecha desde lo alto. Con valent\xEDa en su coraz\xF3n y la promesa
-    de la aventura en sus pasos, se dispone a ascender hacia el santuario del malvado
-    mago, donde el destino del pueblo yace en la balanza entre la luz y las sombras."
+    ancestral que acecha desde lo alto. Asi se dispone a ascender hacia el santuario
+    del malvado mago, donde el destino del pueblo yace en la balanza entre la luz
+    y las sombras."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4cab29e7e4cf15b408250673b1430ac3, type: 2}
   m_sharedMaterial: {fileID: 4693580821504976988, guid: 4cab29e7e4cf15b408250673b1430ac3, type: 2}
@@ -2607,7 +2607,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/_GameAssets/Scenes/Casa1.unity
     guid: 6c1e202d1c7e6284fabd7660ff583506
   - enabled: 1
+    path: Assets/_GameAssets/Scenes/Casa2.unity
+    guid: 3bd59b2377db9fd44b60240249a9d589
+  - enabled: 1
     path: Assets/_GameAssets/Scenes/Cargando.unity
     guid: 0bce6fc46d2dd0548bb7bf40fca4f727
   m_configObjects: {}

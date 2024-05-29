@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2450,8 +2450,28 @@ PrefabInstance:
       value: El Pelas
       objectReference: {fileID: 0}
     - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: objetoSpaw
+      value: 
+      objectReference: {fileID: 3049428253405200621, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: puntoSpawn
+      value: 
+      objectReference: {fileID: 1126774633}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: nombreEvento
+      value: moneda
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: noTieneEvento
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: lineasDialogo.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo2.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: lineasDialogo.Array.data[0]
@@ -2468,6 +2488,10 @@ PrefabInstance:
     - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: lineasDialogo.Array.data[2]
       value: "\xA1Disfrutala!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831288993031924727, guid: a117e048b7165f148af9e0d537eca186, type: 3}
+      propertyPath: lineasDialogo2.Array.data[0]
+      value: "\xDAsala con cabeza."
       objectReference: {fileID: 0}
     - target: {fileID: 2941890787356793427, guid: a117e048b7165f148af9e0d537eca186, type: 3}
       propertyPath: m_Name
@@ -6279,63 +6303,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4237517483046682220, guid: b6f9b587034166549809f3a9c6c33262, type: 3}
   m_PrefabInstance: {fileID: 526275360}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &531337832
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3049428253405200621, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_Name
-      value: Moneda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049428253405200658, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.247
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049428253405200658, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.0000009536743
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049428253405200658, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -23.045
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049428253405200658, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049428253405200658, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049428253405200658, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049428253405200658, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049428253405200658, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049428253405200658, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049428253405200658, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
 --- !u!4 &541261186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4538304254603464, guid: 7a77ea810bbc0db4992e500affe32dbf, type: 3}
@@ -14025,6 +13992,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1289316788731868461, guid: a9a8a17fbc5ca2e47aa025e052d1aca7, type: 3}
   m_PrefabInstance: {fileID: 1125759557}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1126774632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1126774633}
+  m_Layer: 0
+  m_Name: puntoSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1126774633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126774632}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.134, y: -0, z: -23.081}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1127878229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24255,6 +24253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23731aa55f06474899dcab8cbf6a36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  posicion: 
 --- !u!4 &2002844409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4966303650379956, guid: 7f3b1263233678a4a92861d908051fe3, type: 3}
@@ -26610,8 +26610,8 @@ SceneRoots:
   - {fileID: 1275324888}
   - {fileID: 1249139276}
   - {fileID: 1200779788}
-  - {fileID: 531337832}
   - {fileID: 561087870}
+  - {fileID: 1126774633}
   - {fileID: 1423099359}
   - {fileID: 1802386445}
   - {fileID: 1941211601}

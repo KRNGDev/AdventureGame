@@ -261,7 +261,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 178
+  Priority: 133
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 5
@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ceefd5b4ae4b7845bb9b92130a69f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 2
   rangoDeteccion: 10
   nombreTagAtacar: Player
   seguir: 0
@@ -384,8 +385,6 @@ MonoBehaviour:
   spawnSlash: {fileID: 0}
   atacando: 0
   congelado: 0
-  tiempoEspera: 0.5
-  targets: []
 --- !u!114 &6229172114569357860
 MonoBehaviour:
   m_ObjectHideFlags: 0

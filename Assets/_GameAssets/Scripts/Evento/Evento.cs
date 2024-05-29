@@ -58,9 +58,9 @@ public class Evento : MonoBehaviour
         dialogo.hablado = false;
 
         mainCamara.GetComponent<TopDownCamara>().BuscarTarget("Player");
-        mainCamara.GetComponent<TopDownCamara>().m_SmoothSpeed = 1;
-        mainCamara.GetComponent<TopDownCamara>().m_Distancia = 7.57f;
-        mainCamara.GetComponent<TopDownCamara>().m_Altura = 12.6f;
+        mainCamara.GetComponent<TopDownCamara>().m_SmoothSpeed = 0.3f;
+        mainCamara.GetComponent<TopDownCamara>().m_Distancia = 5f;
+        mainCamara.GetComponent<TopDownCamara>().m_Altura = 10f;
         Destroy(GameObject.Find(objetivoMirar));
         if (dialogoDespues)
         {

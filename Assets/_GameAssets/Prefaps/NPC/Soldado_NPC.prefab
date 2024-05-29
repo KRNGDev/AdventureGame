@@ -34093,8 +34093,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.0940678
-  m_Center: {x: 0.0000009625804, y: 0.40374494, z: 0.59998524}
+  m_Radius: 1.4895879
+  m_Center: {x: 0.0000009734847, y: 0.40374494, z: 0.9955057}
 --- !u!114 &-1013138247653851684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34110,6 +34110,7 @@ MonoBehaviour:
   marcaDialogo: {fileID: 462399158549471315}
   objetoSpaw: {fileID: 0}
   puntoSpawn: {fileID: 0}
+  noTieneEvento: 1
   espada: 0
   puerta: 0
   eventoHecho: 0
